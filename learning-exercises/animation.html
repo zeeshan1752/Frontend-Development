@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Keyframe Animation</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .animation-stage { min-height: 10rem; overflow: hidden; padding: 1rem; background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: .5rem; }
+    .moving-box { display: grid; place-items: center; width: 8rem; height: 5rem; color: white; background: #0f766e; border-radius: .5rem; animation: move-card 3s ease-in-out infinite alternate; }
+    @keyframes move-card { from { transform: translateX(0); } to { transform: translateX(min(30vw, 16rem)); } }
+    @media (prefers-reduced-motion: reduce) { .moving-box { animation: none; } }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Effects and interaction</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How keyframes and animation properties move an element over time.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change a keyframe position or duration and observe how the motion changes.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS keyframe animation</summary>
+    <div>
+      <p>A CSS animation applies a sequence of style changes over time. Keyframes define intermediate or start and end states. Animation duration controls one cycle, iteration count controls repetitions, and timing functions control the pace. Direction can alternate between keyframes or reverse the sequence.</p>
+      <p><strong>Example:</strong> The <code>move-card</code> keyframes change transform from a starting position to an ending position. An alternate direction makes each cycle travel back.</p>
+      <p><strong>Common pitfall:</strong> Animating layout properties such as width or top can cause extra layout work. Transform and opacity are often smoother. Respect the prefers-reduced-motion setting.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS keyframe animation</h1>
+  <p>An animation uses keyframes to describe how a property changes over time. This box moves between a start and end position.</p>
+  <div class="animation-stage"><div class="moving-box">Animated box</div></div>
+  <p>Change the animation duration or edit <code>@keyframes move-card</code>. The reduced-motion setting turns off the movement for people who request less animation.</p>
+</main>
+</body>
+</html>

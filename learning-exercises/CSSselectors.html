@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Selectors</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .example { padding: 1rem; border: 1px solid #cbd5e1; border-radius: .5rem; background: #f8fafc; }
+    .highlight { color: #7c2d12; background: #ffedd5; padding: .2rem .4rem; border-radius: .25rem; }
+    #featured { border-left: .3rem solid #2563eb; padding-left: 1rem; }
+    .article p { color: #334155; }
+    .list > li { margin: .4rem 0; }
+    h2 + p { font-weight: 600; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How element, class, id, descendant, and child selectors choose elements.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Add a class to one paragraph and write a selector that changes only that paragraph.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS selectors</summary>
+    <div>
+      <p>A selector describes which elements receive a CSS rule. Element selectors match tag names. Class selectors match reusable class values. Id selectors match a unique id. A descendant selector matches at any depth, while a child selector matches only direct children. An adjacent-sibling selector matches the next sibling immediately after another element.</p>
+      <p><strong>Example:</strong> <code>.article p</code> selects paragraphs anywhere inside an article. <code>.list &gt; li</code> selects direct list items. <code>h2 + p</code> selects a paragraph immediately following an h2.</p>
+      <p><strong>Common pitfall:</strong> A selector only affects elements that actually match its structure. Keep list items inside their ul or ol so child selectors and HTML semantics both work.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS selectors</h1>
+  <p>Selectors tell CSS which HTML elements to style. These examples use real elements so you can see each rule work.</p>
+  <section class="example"><h2>Element selector</h2><p>This paragraph is selected by its element name.</p></section>
+  <p class="highlight">Class selector: a class can be reused on multiple elements.</p>
+  <p id="featured">ID selector: this id identifies one element on this page.</p>
+  <article class="article example">
+    <h2>Descendant selector</h2><p>This paragraph is inside the article, so .article p selects it.</p>
+    <div><p>This nested paragraph is also a descendant of the article.</p></div>
+  </article>
+  <ul class="list"><li>A direct child selected by .list &gt; li</li><li>Another direct child</li></ul>
+  <h2>Adjacent sibling</h2><p>This paragraph immediately follows the heading, so h2 + p selects it.</p>
+</main>
+</body>
+</html>

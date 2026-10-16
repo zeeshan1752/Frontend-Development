@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated profile placeholder</title>
+  <desc id="desc">A simple abstract portrait illustration used in a web development exercise.</desc>
+  <rect width="640" height="480" rx="28" fill="#e7e6dc"/>
+  <circle cx="320" cy="184" r="88" fill="#e6ad82"/>
+  <path d="M202 176c8-92 63-139 126-139 72 0 116 47 120 127-31-31-68-42-106-42-55 0-97 23-140 54Z" fill="#35453d"/>
+  <path d="M142 468c12-113 73-171 178-171s166 58 178 171" fill="#7d9c81"/>
+  <path d="M278 266c26 18 58 18 84 0" fill="none" stroke="#9a624d" stroke-width="8" stroke-linecap="round"/>
+</svg>

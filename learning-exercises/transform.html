@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Transforms</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .demo { display: grid; place-items: center; min-height: 13rem; margin: 3rem 0; border: 1px dashed #94a3b8; background: #f8fafc; }
+    .box { display: grid; place-items: center; width: 12rem; height: 8rem; color: white; background: #1d4ed8; border-radius: .5rem; transition: transform .35s ease; }
+    .box:hover { transform: translate(1rem, -.5rem) rotate(4deg) scale(1.04); }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Effects and interaction</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How transform changes an element's visual position, scale, or rotation.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the rotation or translation value and see that surrounding layout stays put.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS transforms</summary>
+    <div>
+      <p>Transform changes an element&#39;s visual position, scale, rotation, or skew without changing the normal flow space it occupies. Multiple transform functions can be combined in one declaration. Transform origin determines the point around which rotation and scaling occur.</p>
+      <p><strong>Example:</strong> Use <code>translate()</code> to move an element, <code>rotate()</code> to turn it, and <code>scale()</code> to resize its visual appearance. The page layout still reserves the original box space.</p>
+      <p><strong>Common pitfall:</strong> A transformed element can overlap nearby content because its original layout space remains unchanged. Keep hover movement modest and make the effect usable with keyboard focus when interaction matters.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS transforms</h1>
+  <p><code>transform</code> changes how an element looks without changing the surrounding document flow. Hover the blue box to move, rotate, and slightly scale it.</p>
+  <div class="demo"><div class="box">Hover over me</div></div>
+  <p>Try each transform on its own: <code>translate()</code> moves, <code>rotate()</code> turns, and <code>scale()</code> resizes the visual.</p>
+</main>
+</body>
+</html>

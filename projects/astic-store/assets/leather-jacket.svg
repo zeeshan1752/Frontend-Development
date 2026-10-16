@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Camel jacket illustration</title><desc id="desc">A camel-colored jacket with a collar and front pockets on a muted studio backdrop.</desc>
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#e7ded1"/><stop offset="1" stop-color="#c7ad91"/></linearGradient><linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#bd9369"/><stop offset="1" stop-color="#8f6848"/></linearGradient></defs>
+  <rect width="600" height="700" fill="url(#bg)"/><path d="M78 606V132q0-48 48-48h348q48 0 48 48v474Z" fill="#f5eee4" opacity=".32"/><ellipse cx="300" cy="617" rx="176" ry="18" fill="#57483b" opacity=".2"/>
+  <path d="M226 160l-53 22-65 100 57 41 48-52 2 95-44 178q129 45 258 0l-44-178 2-95 48 52 57-41-65-100-53-22-74 66Z" fill="url(#cloth)" stroke="#78583e" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M226 160l39 83 35-17-36-68 36 68 35 17 39-83m-92 66v313m-99-242 42 20m188-20-42 20" fill="none" stroke="#ead0ad" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M177 348l59 8-9 69-60-6Zm187 8 59-8 10 71-60 6Z" fill="#a77a54" stroke="#78583e" stroke-width="4"/><circle cx="293" cy="275" r="5" fill="#f0d9bb"/><circle cx="293" cy="321" r="5" fill="#f0d9bb"/><circle cx="293" cy="367" r="5" fill="#f0d9bb"/>
+</svg>

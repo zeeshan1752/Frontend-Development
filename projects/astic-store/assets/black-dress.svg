@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Black evening dress illustration</title><desc id="desc">A minimal black evening dress on a warm studio backdrop.</desc>
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#e9e3d8"/><stop offset="1" stop-color="#c9c0b3"/></linearGradient><linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#333532"/><stop offset="1" stop-color="#111413"/></linearGradient></defs>
+  <rect width="600" height="700" fill="url(#bg)"/><path d="M82 604V145q0-50 50-50h336q50 0 50 50v459Z" fill="#f4eee4" opacity=".3"/><ellipse cx="302" cy="616" rx="160" ry="20" fill="#665b4f" opacity=".2"/>
+  <path d="M211 182l-43 38-49 90 49 28 43-53-18 98-51 167q158 66 316 0l-51-167-18-98 43 53 49-28-49-90-43-38-46 22-43 54-43-54Z" fill="url(#cloth)" stroke="#101312" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M211 182l-28-48m206 48 28-48M238 257q64 31 128 0M192 579q110 36 220 0" fill="none" stroke="#73766f" stroke-width="5" opacity=".7"/>
+  <path d="M167 220l-35 67 28 17 42-55m231-29 35 67-28 17-42-55" fill="#292d2a"/>
+  <g fill="#fff" opacity=".55"><circle cx="452" cy="168" r="4"/><circle cx="135" cy="422" r="5"/><circle cx="467" cy="469" r="3"/></g>
+</svg>

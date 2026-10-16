@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using Browser Developer Tools</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    li { margin: .65rem 0; }
+    code { padding: .15rem .35rem; background: #f1f5f9; border-radius: .25rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Browser tools</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How browser developer tools help inspect HTML, CSS, and JavaScript while learning.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Inspect one element, change a CSS value temporarily, and see the page update.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Browser developer tools</summary>
+    <div>
+      <p>Developer tools provide a live view of the page&#39;s DOM, styles, network activity, and JavaScript messages. The inspector can reveal which rule wins and where a style came from. The console shows logs and errors. Responsive mode simulates different viewport sizes. Changes made there are temporary experiments.</p>
+      <p><strong>Example:</strong> Inspect a paragraph, untick its color declaration, and watch the page update. Then copy the change into the source file if you want to keep it.</p>
+      <p><strong>Common pitfall:</strong> A temporary edit in DevTools does not update the file on disk. Refreshing the page usually resets those changes.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Browser developer tools</h1>
+  <p>Developer tools help you inspect a page and experiment while it is open. Changes made in the tools are temporary; edit the source file to keep a change.</p>
+  <ol>
+    <li>Right-click an element and choose <strong>Inspect</strong> to find its HTML.</li>
+    <li>In the Styles panel, toggle a CSS declaration or change its value and see the page update.</li>
+    <li>Open the Console to read messages and JavaScript errors.</li>
+    <li>Use the device or responsive view to preview the page at narrower widths.</li>
+  </ol>
+  <p>Try inspecting this paragraph and temporarily changing its text color in the Styles panel.</p>
+</main>
+</body>
+</html>

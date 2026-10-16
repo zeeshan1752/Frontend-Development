@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Color Formats</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .color-card { margin: 1rem 0; padding: 1rem; border: 1px solid #cbd5e1; border-radius: .5rem; background: #f8fafc; }
+    .named { color: darkgreen; }
+    .rgb { color: rgb(15, 85, 160); }
+    #sample-box { color: #9f1239; background: #fff1f2; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> Three common ways to describe a CSS color: names, RGB values, and hexadecimal values.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change one color value and compare how the same color is written in another format.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS color formats</summary>
+    <div>
+      <p>CSS colors can be written with named colors, RGB or RGBA functions, hexadecimal notation, and other formats. RGB describes red, green, and blue channel values. Hex notation encodes those channel values with hexadecimal digits. The format changes how you write the color, not how the browser paints it.</p>
+      <p><strong>Example:</strong> A named color such as <code>darkgreen</code>, an RGB value such as <code>rgb(15, 85, 160)</code>, and a hex value such as <code>#9f1239</code> are all valid CSS color values.</p>
+      <p><strong>Common pitfall:</strong> Check text contrast against its background. A syntactically valid color can still be too faint to read.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS color formats</h1>
+  <p>CSS can describe the same color in different formats. The label names the format used by the text beside it.</p>
+  <p class="color-card named"><strong>Named color:</strong> darkgreen</p>
+  <p class="color-card rgb"><strong>RGB:</strong> rgb(15, 85, 160)</p>
+  <p class="color-card" id="sample-box"><strong>Hexadecimal:</strong> #9f1239</p>
+  <p>Try changing one value and compare its notation with the other examples.</p>
+</main>
+</body>
+</html>

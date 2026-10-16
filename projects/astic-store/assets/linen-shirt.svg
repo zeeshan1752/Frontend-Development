@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Linen shirt illustration</title><desc id="desc">A light stone-colored linen shirt with a simple collar and button placket.</desc>
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#e6e3d9"/><stop offset="1" stop-color="#c7c6b7"/></linearGradient><linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#f0eee2"/><stop offset="1" stop-color="#c8c8b8"/></linearGradient></defs>
+  <rect width="600" height="700" fill="url(#bg)"/><path d="M78 606V132q0-48 48-48h348q48 0 48 48v474Z" fill="#f6f4eb" opacity=".4"/><ellipse cx="300" cy="617" rx="174" ry="18" fill="#57584b" opacity=".2"/>
+  <path d="M226 159l-51 20-70 101 57 45 53-53 5 100-36 174q116 44 232 0l-36-174 5-100 53 53 57-45-70-101-51-20-74 68Z" fill="url(#cloth)" stroke="#979688" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M226 159l39 75 35-7 35 7 39-75-37-29-37 43-37-43Zm74 68v318m-132-263 47 15m172-15-47 15" fill="none" stroke="#aaa99a" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M200 353l51 7-4 59-52-6Z" fill="#d6d5c8" stroke="#aaa99a" stroke-width="4"/><circle cx="310" cy="276" r="4" fill="#888879"/><circle cx="310" cy="319" r="4" fill="#888879"/><circle cx="310" cy="362" r="4" fill="#888879"/><circle cx="310" cy="405" r="4" fill="#888879"/>
+</svg>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Document Structure</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+  <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> The basic document structure that a browser needs to display a web page.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the page title and add a heading and paragraph to the page.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: HTML document structure</summary>
+    <div>
+      <p>The doctype tells the browser to use modern HTML parsing. The html element contains the whole document. The head stores information and linked resources, including the title, stylesheets, and metadata. The body contains the visible page content. External CSS and JavaScript keep presentation and behavior in separate files.</p>
+      <p><strong>Example:</strong> This lesson links <code>tutorial.css</code> in the head and loads <code>tutorial.js</code> with defer. The title appears in the browser tab; the h1 appears in the document.</p>
+      <p><strong>Common pitfall:</strong> Visible page content belongs in the body, not the head. Relative file paths must match the real filename and location exactly.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>A basic HTML page</h1>
+  <p>Every HTML page has a document declaration, a root <code>html</code> element, page information inside <code>head</code>, and visible content inside <code>body</code>.</p>
+  <section class="example"><h2>Visible page content</h2><p>This heading and paragraph are in the body, so the browser displays them.</p></section>
+  <h2>Try it</h2><p>Change the text between the title tags in the head. The browser tab title changes, while this heading remains visible in the page.</p>
+  <h2>Linked files</h2><p>The head links to tutorial.css for page styling. The deferred script at the end loads tutorial.js after the HTML is available.</p>
+  <p id="script-status" aria-live="polite">Waiting for tutorial.js…</p>
+</main>
+  <script src="tutorial.js" defer></script>
+</body>
+</html>

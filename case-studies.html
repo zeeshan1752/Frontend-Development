@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Detailed notes on the goals, frontend decisions, interactions, and limitations of Zeeshan Jamshed's learning projects.">
+    <meta name="theme-color" content="#f4f1e8">
+    <title>Project Case Studies — Zeeshan Jamshed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-studies.css">
+  </head>
+  <body class="case-study-page">
+    <a class="skip-link" href="#case-studies">Skip to case studies</a>
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Zeeshan Jamshed portfolio home"><span class="wordmark-mark">Z</span> Zeeshan Jamshed</a>
+      <nav aria-label="Main navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="learning-exercises/index.html">Learning library</a>
+        <a class="nav-cta" href="https://github.com/zeeshan1752" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="case-studies" class="case-main">
+      <section class="case-hero" aria-labelledby="case-title">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> HOW THESE DEMOS WORK</p>
+        <h1 id="case-title">The thinking behind<br><em>the interactions.</em></h1>
+        <p>These notes walk through each project’s starting point, the browser concepts it demonstrates, and the boundaries of the current demo. Use them alongside the live pages and source files.</p>
+        <a class="text-link" href="index.html#projects">← Back to all projects</a>
+      </section>
+
+      <div class="case-list">
+        <article class="case-study" id="zeeshan-bistro" aria-labelledby="bistro-title">
+          <header class="case-heading"><p class="eyebrow">01 · HOSPITALITY</p><h2 id="bistro-title">Zeeshan Bistro</h2><p>A restaurant landing page that turns a simple signup exercise into a fuller, responsive browsing flow.</p><a class="button button-dark" href="projects/zeeshan-bistro/index.html">Open the demo <span aria-hidden="true">↗</span></a></header>
+          <div class="case-details">
+            <section><h3>Starting point</h3><p>The source exercise had a restaurant theme and a reservation form that pointed to a missing server-side file. This version keeps the concept and makes the page self-contained: visitors can explore the menu and story, then try a reservation request.</p></section>
+            <section><h3>How the interaction works</h3><p>The form uses labelled native inputs and browser validation. JavaScript sets the earliest reservation date to today and intercepts submission to show a local confirmation. The small-screen menu button opens and closes the navigation.</p></section>
+            <section><h3>Frontend concepts</h3><ul><li>Semantic sections and in-page navigation make a single page easy to scan.</li><li>Responsive CSS reshapes the content for narrow screens.</li><li>Form labels and required fields connect instructions to the controls and use built-in validation.</li></ul></section>
+            <section class="case-limit"><h3>Limits and next step</h3><p>No reservation reaches a restaurant or server. A production version would send validated data to a booking service, show server responses, and protect contact details. The current success message is only a browser demo.</p></section>
+          </div>
+        </article>
+
+        <article class="case-study" id="astic-studio" aria-labelledby="astic-title">
+          <header class="case-heading"><p class="eyebrow">02 · COMMERCE</p><h2 id="astic-title">Astic Studio</h2><p>A boutique storefront for practising product browsing, small pieces of UI state, and a shopping-bag flow.</p><a class="button button-dark" href="projects/astic-store/index.html">Open the demo <span aria-hidden="true">↗</span></a></header>
+          <div class="case-details">
+            <section><h3>Starting point</h3><p>The original folder included a fashion-store concept. This version keeps the product-browsing idea and adds a small sample catalogue, category filters, text search, favourites, and a cart drawer.</p></section>
+            <section><h3>How the interaction works</h3><p>The product list is held in a JavaScript array. Rendering filters that list by the selected category and search text. Cart quantities and favourite IDs are saved separately in <code>localStorage</code>; a guarded read falls back to empty state if saved data is missing or invalid. Quantity controls recalculate the subtotal from the sample products.</p></section>
+            <section><h3>Frontend concepts</h3><ul><li>One product data list feeds the cards and cart totals, reducing repeated markup.</li><li>Event delegation handles clicks on product cards that are re-rendered after filtering.</li><li>Native dialog methods provide the cart drawer’s open and close behavior.</li><li>Storage lets state survive a refresh in the same browser, but not move to another device.</li></ul></section>
+            <section class="case-limit"><h3>Limits and next step</h3><p>Names, products, and prices are sample data. There is no inventory, account, order, payment, or server. Checkout intentionally explains this instead of pretending to process an order. A real store needs a secure backend and payment provider; product photography also needs confirmed publishing rights.</p></section>
+          </div>
+        </article>
+
+        <article class="case-study" id="cropwise" aria-labelledby="crop-title">
+          <header class="case-heading"><p class="eyebrow">03 · AGRICULTURE</p><h2 id="crop-title">CropWise</h2><p>A field-planning interface that demonstrates a form-driven result, safe text rendering, and local notes.</p><a class="button button-dark" href="projects/cropwise/index.html">Open the demo <span aria-hidden="true">↗</span></a></header>
+          <div class="case-details">
+            <section><h3>Starting point</h3><p>The earlier crop-advisory prototype called an AI endpoint with an empty key and inserted returned markup into the page. This demo removes the unreliable service dependency and makes its sample behavior explicit.</p></section>
+            <section><h3>How the interaction works</h3><p>Submitting the planner form reads its selected values with <code>FormData</code> and looks up a sample result. Text is placed into the page with <code>textContent</code>, while list items are built as elements, so user-entered notes are displayed as text rather than interpreted as HTML. Notes are saved in this browser. A chosen image uses a temporary object URL for preview and is never uploaded or analyzed.</p></section>
+            <section><h3>Frontend concepts</h3><ul><li>Data lookup maps form selections to a predictable interface state.</li><li>Safe DOM updates keep user text out of HTML parsing.</li><li>Object URLs let a page preview a local file without sending it to a server; the URL is revoked when cleared or replaced.</li><li>Sample rules keep the interface usable without API keys or network services.</li></ul></section>
+            <section class="case-limit"><h3>Limits and next step</h3><p>The results are illustrative sample rules, not validated crop recommendations. Soil and water choices do not affect the crop selection in the current sample table. Any real guidance requires verified local agronomy data, expert review, and careful handling of uncertainty before it is presented as advice.</p></section>
+          </div>
+        </article>
+
+        <article class="case-study" id="focus-board" aria-labelledby="focus-title">
+          <header class="case-heading"><p class="eyebrow">04 · PRODUCTIVITY</p><h2 id="focus-title">Focus Board</h2><p>A small task planner for practising list updates, filtering, date labels, and browser persistence.</p><a class="button button-dark" href="projects/focus-board/index.html">Open the demo <span aria-hidden="true">↗</span></a></header>
+          <div class="case-details">
+            <section><h3>Starting point</h3><p>This is a new project in the collection. The goal is to make a few everyday task actions visible and easy to try without introducing a framework or remote service.</p></section>
+            <section><h3>How the interaction works</h3><p>Tasks live in a JavaScript array and are rendered as DOM elements. Add, complete, delete, and filter actions update that state; changes are saved in <code>localStorage</code>. Saved records are checked for expected fields before use. Progress is recalculated from today’s tasks, and due dates are formatted for display.</p></section>
+            <section><h3>Frontend concepts</h3><ul><li>State and rendering are kept together in a small, readable flow.</li><li>Input values are trimmed and capped before they become tasks.</li><li>Checkbox and delete controls have accessible names tied to each task.</li><li>Filters change which tasks are shown without deleting the other tasks.</li></ul></section>
+            <section class="case-limit"><h3>Limits and next step</h3><p>Tasks stay in one browser profile and are not synchronized or backed up. The next step would be to add explicit empty, error, and storage-unavailable states, then explore a backend only if cross-device accounts were needed.</p></section>
+          </div>
+        </article>
+      </div>
+
+      <aside class="case-note"><h2>How to use this collection</h2><p>These are learning demos. Read each project’s notes and code, try the interactions, and make your own changes before describing the work in an interview. The repository README explains the collection’s background and the AI assistance used to prepare it.</p><a class="text-link" href="index.html#about">← Back to the portfolio introduction</a></aside>
+    </main>
+
+    <footer class="site-footer"><a class="wordmark" href="index.html"><span class="wordmark-mark">Z</span> Zeeshan Jamshed</a><span>Learning portfolio · HTML, CSS &amp; JavaScript</span><a href="#case-studies">Back to top ↑</a></footer>
+  </body>
+</html>

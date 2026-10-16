@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Character References</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .example { padding: 1rem; border: 1px solid #cbd5e1; border-radius: .5rem; background: #f8fafc; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How HTML character references display symbols such as ampersands and copyright marks.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Add a sentence containing an ampersand and a less-than sign; write each as an HTML entity.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: HTML character references</summary>
+    <div>
+      <p>Browsers parse angle brackets and ampersands as part of HTML syntax. A character reference lets you display a reserved character as visible text. The browser converts the reference while rendering the page, so readers see the symbol instead of the code used to write it.</p>
+      <p><strong>Example:</strong> Write the less-than sign as <code>&amp;lt;</code>, the greater-than sign as <code>&amp;gt;</code>, and an ampersand as <code>&amp;amp;</code>. You can also write named symbols such as <code>&amp;copy;</code>.</p>
+      <p><strong>Common pitfall:</strong> Do not type a raw less-than sign before text that could look like a tag. It may be interpreted as markup. Normal HTML text also collapses repeated spaces, so use CSS for spacing.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>HTML character references</h1>
+  <p>Some characters have a special meaning in HTML. Character references let you show those characters as text.</p>
+  <ul>
+    <li><code>&amp;amp;</code> displays as <strong>&amp;</strong> (ampersand)</li>
+    <li><code>&amp;lt;</code> displays as <strong>&lt;</strong> (less-than sign)</li>
+    <li><code>&amp;gt;</code> displays as <strong>&gt;</strong> (greater-than sign)</li>
+    <li><code>&amp;copy;</code> displays as <strong>&copy;</strong> (copyright sign)</li>
+  </ul>
+  <p class="example">Browsers collapse repeated spaces in normal text. Use CSS for layout and spacing instead of invisible characters.</p>
+</main>
+</body>
+</html>

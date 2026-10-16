@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Attribute Selectors and Pseudo-classes</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 44rem; margin: 2rem auto; padding: 0 1rem; }
+    .examples { display: grid; gap: 1.25rem; }
+    label { display: grid; gap: .3rem; }
+    input { max-width: 100%; padding: .55rem; border: 2px solid #64748b; border-radius: .35rem; font: inherit; }
+    input:focus { outline: 3px solid #93c5fd; border-color: #1d4ed8; }
+    input[type="email"] { background: #eff6ff; }
+    a[target="_blank"] { color: #9a3412; }
+    a:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
+    li:nth-child(odd) { background: #f1f5f9; }
+    li:nth-child(even) { background: #dbeafe; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Effects and interaction</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How pseudo-classes and attribute selectors target interactive or specific elements.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Focus an input and hover a link, then identify which selector responds.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Attribute selectors and pseudo-classes</summary>
+    <div>
+      <p>Attribute selectors match elements by the presence or value of an HTML attribute. Pseudo-classes match a state or relationship, such as keyboard focus, hover, or a child&#39;s position. The nth-child pattern can select odd items, even items, or a repeating sequence.</p>
+      <p><strong>Example:</strong> <code>input[type=&#39;email&#39;]</code> selects email inputs. <code>li:nth-child(odd)</code> selects every other list item, starting with the first.</p>
+      <p><strong>Common pitfall:</strong> A selector must match the real attribute value and document structure. Add labels to form fields; placeholder text alone is not a label.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Attribute selectors and pseudo-classes</h1>
+  <p>An attribute selector checks an HTML attribute. A pseudo-class checks a state or position, such as focus or whether an item is odd-numbered.</p>
+  <section class="examples">
+    <label for="name">Name <input id="name" type="text" autocomplete="name"></label>
+    <label for="email">Email <input id="email" type="email" autocomplete="email"></label>
+    <p><a href="https://example.com" target="_blank" rel="noopener noreferrer">This link matches the target attribute selector.</a></p>
+  </section>
+  <h2>Alternating list rows</h2>
+  <ol><li>First item — odd</li><li>Second item — even</li><li>Third item — odd</li><li>Fourth item — even</li></ol>
+  <p>Click or Tab to an input to see its focus style. Try changing <code>odd</code> to <code>3n</code> in the selector.</p>
+</main>
+</body>
+</html>

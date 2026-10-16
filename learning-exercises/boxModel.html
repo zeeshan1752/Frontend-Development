@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The CSS Box Model</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1f2937; background: #e2e8f0; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+    .stage { padding: 1px; background: #cbd5e1; border: 1px dashed #64748b; border-radius: .5rem; }
+    .box { width: 18rem; max-width: calc(100% - 2rem); margin: 2rem; padding: 1.5rem; border: .5rem solid #1d4ed8; background: #dbeafe; }
+    .content { min-height: 5rem; padding: .75rem; background: white; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How content, padding, border, and margin affect an element's size and spacing.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change padding and margin separately and observe which space changes.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: The CSS box model</summary>
+    <div>
+      <p>Every element is laid out as a box. From inside to outside, its layers are content, padding, border, and margin. Padding is inside the border; margin is outside it. By default, width describes the content area, so padding and borders increase the rendered size. The border-box sizing rule makes declared width include padding and borders.</p>
+      <p><strong>Example:</strong> Increase padding to make the colored area around the text larger. Increase margin to move neighboring boxes farther away.</p>
+      <p><strong>Common pitfall:</strong> Margin is transparent space outside the border. Padding is part of the element&#39;s background area, so do not use the two terms interchangeably.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>The CSS box model</h1>
+  <p>Every element is a box made of content, padding, border, and margin. In this example, the blue area is padding, the dark outline is the border, and the space around the border is the margin.</p>
+  <div class="stage"><div class="box"><div class="content"><strong>Content</strong><br>The text and content area live here.</div></div></div>
+  <p>The <code>width</code> sets the content width here. Change padding, border, or margin one at a time to see which part of the box changes.</p>
+</main>
+</body>
+</html>

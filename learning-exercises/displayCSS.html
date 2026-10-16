@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Display Values</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+    .demo { margin: .5rem; padding: .5rem; background: #dbeafe; border: 1px solid #2563eb; }
+    .inline { display: inline; }
+    .inline-block { display: inline-block; width: 10rem; }
+    .block { display: block; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How block, inline, and inline-block display values affect size and line flow.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Switch an example between inline, block, and inline-block and observe the layout.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS display values</summary>
+    <div>
+      <p>The display property controls an element&#39;s outer layout behavior. Block elements start on a new line and can take available width. Inline elements flow with text and generally ignore width and height. Inline-block elements remain in line flow but accept dimensions. Flex and grid create layout contexts for their children.</p>
+      <p><strong>Example:</strong> Change an example&#39;s <code>display</code> from inline to inline-block and observe that width begins to apply while the element can still share a line.</p>
+      <p><strong>Common pitfall:</strong> Display changes layout, not semantic meaning. Keep the HTML element that fits the content, then use CSS to control its visual behavior.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS display values</h1>
+  <p><code>display</code> controls how an element participates in the layout. Compare the three examples:</p>
+  <p><span class="demo inline">Inline one</span><span class="demo inline">Inline two</span> Inline elements share a line; width and height do not apply in the usual way.</p>
+  <p><span class="demo inline-block">Inline-block one</span><span class="demo inline-block">Inline-block two</span> These stay on the same line but accept a width.</p>
+  <div class="demo block">A block element starts on a new line and normally takes the available width.</div>
+  <p>Change one <code>display</code> value in the style block and reload to compare.</p>
+</main>
+</body>
+</html>

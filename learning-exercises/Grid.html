@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid Columns</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 64rem; margin: 2rem auto; padding: 0 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: 1rem; }
+    .item { display: grid; place-items: center; min-height: 6rem; padding: .75rem; background: #dbeafe; border: 1px solid #2563eb; border-radius: .5rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How CSS Grid creates columns and places items in a two-dimensional layout.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the minimum column width and resize the browser to see the grid adapt.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS Grid columns</summary>
+    <div>
+      <p>Grid is a two-dimensional layout system: it can control rows and columns together. A grid container defines tracks, and its direct children become grid items. Repeat and fractional units make track definitions shorter. Auto-fit can create a responsive number of columns from available space.</p>
+      <p><strong>Example:</strong> <code>repeat(auto-fit, minmax(10rem, 1fr))</code> fits as many columns as possible while keeping each one at least 10rem wide.</p>
+      <p><strong>Common pitfall:</strong> Grid rules apply to direct children of the grid container. Extra wrappers can change which elements become grid items.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS Grid columns</h1>
+  <p>Grid lays items out in rows and columns. This grid automatically creates as many columns as fit, while keeping each one at least 10rem wide.</p>
+  <div class="grid" aria-label="Grid examples">
+    <div class="item">Grid item 1</div><div class="item">Grid item 2</div><div class="item">Grid item 3</div><div class="item">Grid item 4</div>
+    <div class="item">Grid item 5</div><div class="item">Grid item 6</div><div class="item">Grid item 7</div><div class="item">Grid item 8</div>
+  </div>
+  <p>Try replacing <code>auto-fit</code> with <code>auto-fill</code>, or change the minimum width and resize the page.</p>
+</main>
+</body>
+</html>

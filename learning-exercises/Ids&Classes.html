@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML IDs and Classes</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .card { margin: 1rem 0; padding: 1rem; border: 1px solid #cbd5e1; border-radius: .6rem; }
+    .highlight { color: #7c2d12; background: #ffedd5; }
+    #main-card { border-color: #2563eb; }
+    .large { font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> An id names one unique element, while a class can be reused on many elements.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Give two cards the same class, then give one of them a unique id and style each selector.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: IDs and classes</summary>
+    <div>
+      <p>A class is a reusable label for one or more elements. An id is a unique label for one element in the document. CSS selects a class with a leading dot and an id with a leading hash. Classes work well for visual styles; ids are useful for unique sections and fragment links.</p>
+      <p><strong>Example:</strong> Use <code>.card</code> for every card and <code>#main-card</code> for one specific card. An element can carry more than one class, separated by spaces.</p>
+      <p><strong>Common pitfall:</strong> Avoid repeating the same id on multiple elements. For reusable styling, prefer a class rather than creating a different id for every item.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>IDs and classes</h1>
+  <p>Use a class for a style that may appear on many elements. Use an id to identify one unique element on the page.</p>
+  <article id="main-card" class="card"><h2>Main card</h2><p class="highlight">This reusable class adds a highlight.</p></article>
+  <article class="card"><h2>Second card</h2><p class="highlight large">This element reuses the highlight class and adds a second class.</p></article>
+  <p>In CSS, select a class with a dot, like <code>.card</code>, and an id with a hash, like <code>#main-card</code>.</p>
+</main>
+</body>
+</html>

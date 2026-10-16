@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Links and Images</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .link-list { display: grid; gap: .6rem; padding-left: 1.25rem; }
+    a { color: #1d4ed8; }
+    img { display: block; width: min(100%, 25rem); height: auto; margin: 1rem 0; border: 1px solid #cbd5e1; border-radius: .5rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How links navigate and how image alternative text describes an image.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the link destination and write alt text that explains the sample image.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Links and images</summary>
+    <div>
+      <p>An anchor creates a link, and its href names the destination. Relative paths point to nearby files; full URLs point to other sites. An image&#39;s alt text communicates its useful content when the image cannot be seen or loaded. Decorative images can use an empty alt value.</p>
+      <p><strong>Example:</strong> A link to <code>tutorial.html</code> opens another local lesson. A description such as <code>alt=&#39;Simple illustrated profile&#39;</code> tells the reader what the sample image depicts.</p>
+      <p><strong>Common pitfall:</strong> Avoid link text such as click here when the destination is not clear. Do not use a filename as alt text; describe the image&#39;s purpose or leave alt empty if it is purely decorative.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>HTML links and images</h1>
+  <p>An anchor uses <code>href</code> to name its destination. Use a relative path to open another file in this library.</p>
+  <h2>Links to other lessons</h2>
+  <ul class="link-list"><li><a href="paragraph&emmet.html">Headings and paragraphs</a></li><li><a href="tutorial.html">Basic document structure</a></li></ul>
+  <h2>Links to other sites</h2>
+  <ul class="link-list">
+    <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs (opens a new tab)</a></li>
+    <li><a href="https://www.w3.org/" target="_blank" rel="noopener noreferrer">W3C (opens a new tab)</a></li>
+  </ul>
+  <h2>An image with alternative text</h2>
+  <p>The <code>alt</code> attribute gives a text description when an image cannot be seen or loaded.</p>
+  <img src="placeholder-person.svg" alt="Simple illustrated profile placeholder">
+  <p>Try changing the image's alt text to describe what the picture shows.</p>
+</main>
+</body>
+</html>

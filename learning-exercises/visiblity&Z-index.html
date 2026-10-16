@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visibility and z-index</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .stage { min-height: 14rem; position: relative; margin: 1rem 0; border: 1px solid #94a3b8; border-radius: .5rem; background: #f8fafc; }
+    .layer { position: absolute; top: 2rem; width: 10rem; min-height: 7rem; display: grid; place-items: center; padding: 1rem; color: white; border-radius: .5rem; }
+    .back { left: 2rem; z-index: 1; background: #b91c1c; }
+    .front { left: 7rem; top: 4rem; z-index: 2; background: #1d4ed8; }
+    .visibility-row { display: flex; gap: 1rem; align-items: center; }
+    .visibility-item { padding: .75rem; background: #dcfce7; border: 1px solid #16a34a; }
+    .hidden { visibility: hidden; }
+    .removed { display: none; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How visibility and stacking order affect whether and where elements appear.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the z-index values, then compare visibility hidden with display none.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Visibility and stacking order</summary>
+    <div>
+      <p>Visibility hidden makes an element invisible while keeping its layout space. Display none removes the element from layout. Z-index controls stacking order for positioned elements and within stacking contexts; a larger number does not always win if the elements belong to different stacking contexts.</p>
+      <p><strong>Example:</strong> Compare two rows where the middle element uses visibility hidden versus display none. In an overlap, increase the front element&#39;s z-index to bring it forward within the same stacking context.</p>
+      <p><strong>Common pitfall:</strong> A negative z-index can place an element behind the page background. Use descriptive text in overlapping examples so the stacking order is easy to see.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Visibility and z-index</h1>
+  <p>When elements overlap, <code>z-index</code> controls their stacking order for positioned elements. The blue box has the higher value, so it appears in front.</p>
+  <div class="stage" aria-label="Two overlapping positioned boxes">
+    <div class="layer back">Behind<br>z-index: 1</div>
+    <div class="layer front">In front<br>z-index: 2</div>
+  </div>
+  <h2>Hidden versus removed</h2>
+  <p><code>visibility: hidden</code> hides the middle box but keeps its space. <code>display: none</code> removes the middle box and its space.</p>
+  <div class="visibility-row"><div class="visibility-item">First</div><div class="visibility-item hidden">Hidden, space stays</div><div class="visibility-item">Third</div></div>
+  <div class="visibility-row"><div class="visibility-item">First</div><div class="visibility-item removed">Removed, no space</div><div class="visibility-item">Third</div></div>
+</main>
+</body>
+</html>

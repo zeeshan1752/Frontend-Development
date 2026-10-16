@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid Row and Column Gaps</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 56rem; margin: 2rem auto; padding: 0 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 1rem; row-gap: 2rem; }
+    .box { display: grid; place-items: center; min-height: 5rem; padding: .5rem; background: #cffafe; border: 1px solid #0891b2; border-radius: .4rem; }
+    @media (max-width: 36rem) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How row and column gaps add space between grid tracks.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Adjust row-gap and column-gap independently to compare the spacing.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Grid row and column gaps</summary>
+    <div>
+      <p>Grid gaps create consistent empty space between tracks without adding margins to each item. Row gap affects vertical spacing; column gap affects horizontal spacing. The gap shorthand can set one value for both or two values for rows then columns.</p>
+      <p><strong>Example:</strong> Use <code>gap: 1rem 2rem</code> for a 1rem row gap and a 2rem column gap. Separate long and short names can make a demonstration easier to read.</p>
+      <p><strong>Common pitfall:</strong> A gap is space between tracks, not around the outside of the grid. Add padding to the container if you also need space at its edges.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Grid row and column gaps</h1>
+  <p><code>column-gap</code> controls horizontal space between columns. <code>row-gap</code> controls vertical space between rows.</p>
+  <div class="grid" aria-label="Grid with separate row and column gaps">
+    <div class="box">Item 1</div><div class="box">Item 2</div><div class="box">Item 3</div>
+    <div class="box">Item 4</div><div class="box">Item 5</div><div class="box">Item 6</div>
+    <div class="box">Item 7</div><div class="box">Item 8</div><div class="box">Item 9</div>
+  </div>
+  <p>Try setting both gap values to the same amount, or use the shorthand <code>gap: 1rem 2rem</code> for row gap followed by column gap.</p>
+</main>
+</body>
+</html>

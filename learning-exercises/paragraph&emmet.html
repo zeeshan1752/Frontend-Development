@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Headings, Paragraphs, and Emmet</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .example { padding: 1rem; border-left: .3rem solid #2563eb; background: #eff6ff; border-radius: .4rem; }
+    code { padding: .15rem .35rem; background: #f1f5f9; border-radius: .25rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How headings and paragraphs organize text, plus a few useful text tags.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Add a short section with one heading, two paragraphs, and one emphasized phrase.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Headings, paragraphs, and Emmet</summary>
+    <div>
+      <p>Headings form the outline of a page. Use one clear main heading, then use lower heading levels for sections and subsections. Paragraphs group related sentences. Strong and emphasis tags indicate meaning, while line breaks are for meaningful breaks within one block of text.</p>
+      <p><strong>Example:</strong> An editor with Emmet can expand <code>ul&gt;li*3</code> into an unordered list containing three list items. Use <code>h2</code> for a section under the page&#39;s <code>h1</code>.</p>
+      <p><strong>Common pitfall:</strong> Do not select heading levels because of their font size. Do not use repeated br tags to create vertical spacing; use paragraphs, margins, or padding.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Headings, paragraphs, and Emmet</h1>
+  <p>Use headings to show the outline of a page. Start with one main heading, then use lower-level headings for sections and subsections.</p>
+  <section class="example">
+    <h2>Section heading</h2>
+    <p>A paragraph contains a related block of text. Use <strong>strong</strong> for important text and <em>emphasis</em> when a phrase needs stress.</p>
+    <p>A line break is useful for a meaningful break, such as an address, but use a new paragraph for a new thought.</p>
+  </section>
+  <h2>Emmet shortcut</h2>
+  <p>In an editor with Emmet enabled, <code>ul&gt;li*3</code> expands to a list with three list items. Try typing that shortcut in an HTML file and expanding it.</p>
+</main>
+</body>
+</html>

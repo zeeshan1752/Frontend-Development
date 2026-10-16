@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Zeeshan Jamshed's frontend learning portfolio: four interactive projects and a detailed HTML and CSS learning library.">
+    <meta name="theme-color" content="#f4f1e8">
+    <title>Zeeshan Jamshed — Frontend Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#projects">Skip to projects</a>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Zeeshan Jamshed portfolio home"><span class="wordmark-mark">Z</span> Zeeshan Jamshed</a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="learning-exercises/index.html">Learning library</a>
+        <a class="nav-cta" href="https://github.com/zeeshan1752" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> HI, I'M Zeeshan Jamshed · FRONTEND DEVELOPER IN TRAINING</p>
+          <h1 id="hero-title">I make ideas<br><em>interactive.</em></h1>
+          <p class="hero-intro">I’m building my frontend skills by turning lessons and prototypes into browser experiences with HTML, CSS, and JavaScript. Explore a demo, then read its case study to see how it works and what I’d improve next.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#projects">Explore the projects <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/zeeshan1752" target="_blank" rel="noopener noreferrer">Visit my GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="art-card art-card-back"><span>HTML</span><b>&lt;/&gt;</b></div>
+          <div class="art-card art-card-front"><span>CSS + JS</span><b>✳</b></div>
+          <div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✦</div>
+          <p class="art-caption">BUILT TO BE<br>CLICKED &amp; EXPLORED</p>
+        </div>
+      </section>
+
+      <section class="project-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE COLLECTION <span class="rule"></span></p><h2 id="projects-title">Four ideas, four ways to build.</h2></div>
+          <p>Try each browser demo, then open its case study for the decisions, technical details, and current limitations.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card card-bistro">
+            <a class="project-demo" href="projects/zeeshan-bistro/index.html" aria-label="Open Zeeshan Bistro demo">
+            <div class="card-visual bistro-visual"><img src="projects/zeeshan-bistro/assets/dessert-illustration.svg" alt="Pastel illustration of three frosted cupcakes on a plate" loading="lazy" decoding="async"><span class="visual-tag">01 / HOSPITALITY</span><span class="visual-arrow" aria-hidden="true">↗</span></div>
+            <div class="card-copy"><div><h3>Zeeshan Bistro</h3><p>A warm restaurant landing page with a working reservation form.</p></div><span class="card-number">01</span></div>
+            <div class="card-tags"><span>Responsive layout</span><span>Form handling</span><span>Menu</span></div>
+            </a><a class="case-study-link" href="case-studies.html#zeeshan-bistro">Read the case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card card-astic">
+            <a class="project-demo" href="projects/astic-store/index.html" aria-label="Open Astic Studio demo">
+            <div class="card-visual fashion-visual"><img src="projects/astic-store/assets/gold-gown.svg" alt="Illustration of a gold evening gown" loading="lazy" decoding="async"><span class="visual-tag">02 / COMMERCE</span><span class="visual-arrow" aria-hidden="true">↗</span></div>
+            <div class="card-copy"><div><h3>Astic Studio</h3><p>A boutique storefront with filters, favourites and a local cart.</p></div><span class="card-number">02</span></div>
+            <div class="card-tags"><span>Product filtering</span><span>Cart</span><span>Local storage</span></div>
+            </a><a class="case-study-link" href="case-studies.html#astic-studio">Read the case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card card-crop">
+            <a class="project-demo" href="projects/cropwise/index.html" aria-label="Open CropWise demo">
+            <div class="card-visual crop-visual"><span class="crop-sun">☼</span><span class="crop-stem stem-one"></span><span class="crop-stem stem-two"></span><span class="crop-stem stem-three"></span><span class="visual-tag">03 / AGRICULTURE</span><span class="visual-arrow" aria-hidden="true">↗</span><div class="crop-label">GROW<br>WITH CARE</div></div>
+            <div class="card-copy"><div><h3>CropWise</h3><p>A calm field-planning demo inspired by an existing crop advisory prototype.</p></div><span class="card-number">03</span></div>
+            <div class="card-tags"><span>Interactive form</span><span>Field notes</span><span>Accessible UI</span></div>
+            </a><a class="case-study-link" href="case-studies.html#cropwise">Read the case study <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card card-focus">
+            <a class="project-demo" href="projects/focus-board/index.html" aria-label="Open Focus Board demo">
+            <div class="card-visual focus-visual"><span class="focus-stamp">ONE<br>THING<br>AT A TIME</span><div class="focus-task task-one"><i></i><span>Plan the week</span><b>✓</b></div><div class="focus-task task-two"><i></i><span>Ship something small</span><b>↗</b></div><div class="focus-task task-three"><i></i><span>Take a real break</span><b>·</b></div><span class="visual-tag">04 / PRODUCTIVITY</span><span class="visual-arrow" aria-hidden="true">↗</span></div>
+            <div class="card-copy"><div><h3>Focus Board</h3><p>A friendly task planner with filters and tasks saved in the browser.</p></div><span class="card-number">04</span></div>
+            <div class="card-tags"><span>Task management</span><span>Filters</span><span>Local storage</span></div>
+            </a><a class="case-study-link" href="case-studies.html#focus-board">Read the case study <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-heading"><p class="eyebrow">A LITTLE ABOUT ME</p><h2 id="about-title">Learning by making<br><em>useful things.</em></h2></div>
+        <div class="about-copy"><p>I’m Zeeshan, a frontend developer in training. I learn by building small, complete projects: structuring a page, making it adapt to different screens, and adding interactions people can understand.</p><p>This collection grows from my HTML and CSS practice pages and earlier prototypes. The case studies explain what each demo does, the choices behind it, and what still needs work. These are learning projects, not live commercial services.</p><div class="skill-list" aria-label="Current frontend practice areas"><span>Semantic HTML</span><span>Responsive CSS</span><span>Vanilla JavaScript</span><span>Forms and accessibility</span><span>Browser storage</span></div><a class="text-link" href="https://github.com/zeeshan1752" target="_blank" rel="noopener noreferrer">See my GitHub profile <span aria-hidden="true">↗</span></a></div>
+      </section>
+
+      <section class="learning-strip">
+        <div class="learning-icon" aria-hidden="true">⌘</div>
+        <div><p class="eyebrow">A PLACE TO PRACTISE</p><h2>Small lessons. Useful building blocks.</h2><p>The learning library keeps the HTML and CSS exercises that led to these projects, grouped in one place.</p></div>
+        <a class="button button-outline" href="learning-exercises/index.html">Browse the learning library <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark">Z</span> Zeeshan Jamshed</a><span>Learning portfolio · HTML, CSS &amp; JavaScript</span><a href="#top">Back to top ↑</a></footer>
+  </body>
+</html>
+

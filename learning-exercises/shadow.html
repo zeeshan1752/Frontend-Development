@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Box and Text Shadows</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .card { padding: 1.25rem; background: #f8fafc; border-radius: .6rem; box-shadow: 0 8px 22px rgb(15 23 42 / 14%); }
+    .card h2 { color: #1e3a8a; text-shadow: 1px 2px 2px rgb(15 23 42 / 18%); }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How box shadows add depth to elements and text shadows emphasize text.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Adjust the shadow blur and offset to make the effect softer or stronger.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Box shadows and text shadows</summary>
+    <div>
+      <p>A box shadow draws a shadow around an element&#39;s rectangular box. Its values can include horizontal offset, vertical offset, blur, spread, color, and an optional inset keyword. A text shadow applies similar offsets and blur to glyphs.</p>
+      <p><strong>Example:</strong> A subtle shadow such as <code>0 4px 14px rgb(15 23 42 / 12%)</code> adds depth without overpowering the card. Increase blur for a softer edge.</p>
+      <p><strong>Common pitfall:</strong> A later box-shadow declaration replaces an earlier one unless both shadows are combined in one comma-separated declaration. Keep contrast strong enough for text.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Box shadows and text shadows</h1>
+  <p><code>box-shadow</code> draws a shadow around a box. <code>text-shadow</code> draws one behind the letters.</p>
+  <article class="card"><h2>Card with a soft shadow</h2><p>Change the horizontal offset, vertical offset, blur, or color in the style block. A larger blur makes the shadow softer.</p></article>
+</main>
+</body>
+</html>

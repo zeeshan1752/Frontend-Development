@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styling Links and Buttons</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    nav ul { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; }
+    nav a { display: inline-block; padding: .5rem .75rem; color: #1e3a8a; background: #eff6ff; border-radius: .35rem; }
+    nav a:hover { color: white; background: #1d4ed8; }
+    nav a:focus-visible, .action:focus-visible { outline: 3px solid #b45309; outline-offset: 3px; }
+    .action { display: inline-block; margin-right: .5rem; padding: .55rem .85rem; color: white; background: #0f766e; border: 0; border-radius: .35rem; font: inherit; cursor: pointer; }
+    .action:hover { background: #115e59; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How CSS states make links and buttons clearer to hover over and focus.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Use Tab to focus a link or button, then adjust its focus style.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Styling links and buttons</summary>
+    <div>
+      <p>Links navigate to a destination; buttons perform an action. CSS pseudo-classes let a design respond to states such as hover, keyboard focus, visited, or active. A visible focus indicator is essential for people navigating with a keyboard.</p>
+      <p><strong>Example:</strong> Use <code>:hover</code> for a pointer state and <code>:focus-visible</code> for keyboard focus. An anchor should have an href; a button should have an appropriate type.</p>
+      <p><strong>Common pitfall:</strong> Do not use an anchor as a button when there is no destination, or a button as a link. Keep hover and focus states visually clear and do not rely on color alone.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Styling links and buttons</h1>
+  <p>Links take people to another location. Buttons perform an action. Their hover, focus, and active states help show how they respond.</p>
+  <nav aria-label="Example page links"><ul><li><a href="#states">Home</a></li><li><a href="tutorial.html">Open the HTML lesson</a></li></ul></nav>
+  <section id="states">
+    <a class="action" href="index.html">Back to lesson index</a>
+    <button class="action" type="button">Example button</button>
+  </section>
+  <p>Use Tab to move keyboard focus through the links and button. The button is a style example and is not connected to an action.</p>
+</main>
+</body>
+</html>

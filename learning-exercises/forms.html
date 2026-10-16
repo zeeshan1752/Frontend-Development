@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Forms and Labels</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .form-example { display: grid; gap: 1rem; max-width: 32rem; }
+    .field { display: grid; gap: .3rem; }
+    input, select, textarea, button { font: inherit; padding: .55rem; }
+    fieldset { border: 1px solid #94a3b8; border-radius: .5rem; }
+    .choice { margin-right: 1rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How labels, input types, and fieldsets make forms easier to use.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Add a labeled input and connect its label to the input with matching for and id values.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: HTML forms and labels</summary>
+    <div>
+      <p>A form groups controls that collect input. A label gives a control a readable name and can focus it when selected. Matching a label&#39;s for value to an input&#39;s id connects them. Input types provide appropriate keyboards and browser validation. Fieldsets and legends group related choices.</p>
+      <p><strong>Example:</strong> Use <code>type=&#39;email&#39;</code> for an email address and put radio buttons for one question under the same name. Give each radio a distinct value.</p>
+      <p><strong>Common pitfall:</strong> Placeholder text is not a replacement for a label. A front-end form without a server or submit handler cannot store answers; avoid implying that it sends data.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>A labeled HTML form</h1>
+  <p>A label tells people what to enter. Its <code>for</code> value must match the input's <code>id</code>.</p>
+  <form class="form-example">
+    <div class="field"><label for="full-name">Name</label><input id="full-name" name="name" type="text" autocomplete="name" required></div>
+    <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="new-password"></div>
+    <fieldset><legend>Preferred contact method</legend>
+      <label class="choice"><input type="radio" name="contact" value="email"> Email</label>
+      <label class="choice"><input type="radio" name="contact" value="phone"> Phone</label>
+    </fieldset>
+    <div class="field"><label for="about">A little about you</label><textarea id="about" name="about" rows="4"></textarea></div>
+    <div class="field"><label for="favorite-car">Choose a sample option</label><select id="favorite-car" name="favorite-car">
+      <option value="">Choose one</option><option value="roadster">Roadster</option><option value="hatchback">Hatchback</option>
+    </select></div>
+    <button type="submit">Submit example</button>
+  </form>
+  <p><strong>Note:</strong> This practice form has no server, so submitting it will not save your answers.</p>
+</main>
+</body>
+</html>

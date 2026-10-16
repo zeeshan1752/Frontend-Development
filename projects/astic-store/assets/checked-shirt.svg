@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Navy checked shirt illustration</title><desc id="desc">A navy and cream checked shirt with a collar and button placket.</desc>
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#d9dfe0"/><stop offset="1" stop-color="#a9b7b8"/></linearGradient><pattern id="check" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#32545e"/><path d="M0 0h15v30H0Zm15 0h15v15H15ZM0 15h15v15H0Z" fill="#e7d9ba" opacity=".76"/><path d="M0 14h30M14 0v30" stroke="#243e48" stroke-width="3" opacity=".8"/></pattern><clipPath id="shirt"><path d="M226 159l-51 20-70 101 57 45 53-53 5 100-36 174q116 44 232 0l-36-174 5-100 53 53 57-45-70-101-51-20-74 68Z"/></clipPath></defs>
+  <rect width="600" height="700" fill="url(#bg)"/><path d="M78 606V132q0-48 48-48h348q48 0 48 48v474Z" fill="#f5f2e8" opacity=".38"/><ellipse cx="300" cy="617" rx="174" ry="18" fill="#36494d" opacity=".22"/>
+  <path d="M226 159l-51 20-70 101 57 45 53-53 5 100-36 174q116 44 232 0l-36-174 5-100 53 53 57-45-70-101-51-20-74 68Z" fill="url(#check)" stroke="#263f47" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M226 159l39 75 35-7 35 7 39-75-37-29-37 43-37-43Zm74 68v318" fill="#e8e3d3" stroke="#263f47" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M300 227v318" stroke="#bab5a6" stroke-width="3"/><circle cx="309" cy="276" r="4" fill="#35535a"/><circle cx="309" cy="319" r="4" fill="#35535a"/><circle cx="309" cy="362" r="4" fill="#35535a"/><circle cx="309" cy="405" r="4" fill="#35535a"/>
+</svg>

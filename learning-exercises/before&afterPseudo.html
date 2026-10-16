@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Before and After Pseudo-elements</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; background: #f8fafc; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; list-style: none; }
+    nav a { color: #1d4ed8; }
+    .decorated { color: #1e3a8a; }
+    .decorated::before, .decorated::after { color: #b45309; }
+    .decorated::before { content: "✦ "; }
+    .decorated::after { content: " ✦"; }
+    .tip { padding: 1rem; border-left: .3rem solid #0f766e; background: #ecfdf5; border-radius: .4rem; }
+    .tip::before { content: "✦ "; font-weight: 700; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Effects and interaction</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How ::before and ::after add decorative content without extra HTML elements.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Add a decorative marker with a pseudo-element and keep meaningful text in the HTML.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Before and after pseudo-elements</summary>
+    <div>
+      <p>The ::before and ::after pseudo-elements create generated content attached to an element&#39;s content box. They require a content declaration and are commonly used for visual decoration, markers, or small shapes without adding extra markup.</p>
+      <p><strong>Example:</strong> A heading can use <code>::before</code> and <code>::after</code> to add decorative stars around its text. The actual heading remains ordinary HTML.</p>
+      <p><strong>Common pitfall:</strong> Keep essential information out of generated content because assistive technologies may not expose it consistently. Use real HTML for meaningful words and controls.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <header><nav aria-label="Sample navigation"><ul><li><a href="#pseudo">Pseudo-elements</a></li><li><a href="#tip">Tip</a></li></ul></nav></header>
+  <h1 id="pseudo" class="decorated">Add decoration with CSS</h1>
+  <p>The stars around this heading come from <code>::before</code> and <code>::after</code>. They are decorative, so the meaningful heading text remains in the HTML.</p>
+  <p id="tip" class="tip">Keep useful content in the HTML. Use pseudo-elements for decoration such as markers or borders.</p>
+</main>
+</body>
+</html>

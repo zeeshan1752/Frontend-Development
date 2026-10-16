@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Gold evening gown illustration</title><desc id="desc">A gold evening gown with a flowing skirt on a soft cream backdrop.</desc>
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#e9dfc9"/><stop offset="1" stop-color="#c8b995"/></linearGradient><linearGradient id="cloth" x2="1" y2=".35"><stop stop-color="#9c6b25"/><stop offset=".45" stop-color="#edc574"/><stop offset="1" stop-color="#b17b2c"/></linearGradient></defs>
+  <rect width="600" height="700" fill="url(#bg)"/><path d="M72 596V120q0-42 42-42h372q42 0 42 42v476Z" fill="#f8f2e7" opacity=".38"/><circle cx="462" cy="148" r="72" fill="#f7edcc" opacity=".5"/><ellipse cx="301" cy="616" rx="171" ry="19" fill="#5a4b31" opacity=".2"/>
+  <path d="M234 172l-40-24-52 64 45 35 34-35-16 94-81 266q176 68 352 0l-81-266-16-94 34 35 45-35-52-64-40 24-42 49-43-49Z" fill="url(#cloth)" stroke="#89601f" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M234 172l-20-45m172 45 20-45M231 270q69 27 138 0M140 579q161 51 320 0" fill="none" stroke="#ffebad" stroke-width="6" opacity=".78"/>
+  <path d="M206 248q94 36 188 0M186 332q114 39 228 0M164 432q137 49 274 0" fill="none" stroke="#f7dfa0" stroke-width="3" opacity=".6"/>
+  <g fill="#fff4cf"><circle cx="158" cy="282" r="4"/><circle cx="432" cy="314" r="4"/><circle cx="223" cy="411" r="3"/><circle cx="388" cy="473" r="4"/><circle cx="302" cy="534" r="3"/></g>
+</svg>

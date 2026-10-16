@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Cupcakes on a plate</title>
+  <desc id="desc">A pastel illustration of three frosted cupcakes arranged on a ceramic plate.</desc>
+  <defs>
+    <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f4d8bd"/><stop offset="1" stop-color="#e9b994"/></linearGradient>
+    <linearGradient id="plate" x2="0" y2="1"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#e9d8c0"/></linearGradient>
+    <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#bd6d50"/><stop offset="1" stop-color="#853e38"/></linearGradient>
+    <linearGradient id="frosting" x2="1" y2="1"><stop stop-color="#fff0dc"/><stop offset="1" stop-color="#e8ae97"/></linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#wall)"/>
+  <circle cx="672" cy="94" r="43" fill="#f6dfb3" opacity=".72"/>
+  <path d="M0 360Q204 310 400 354T800 330V500H0Z" fill="#d99a72" opacity=".5"/>
+  <ellipse cx="402" cy="405" rx="294" ry="57" fill="#a66d55" opacity=".22"/>
+  <ellipse cx="400" cy="382" rx="294" ry="63" fill="url(#plate)" stroke="#fff8eb" stroke-width="8"/>
+  <ellipse cx="400" cy="378" rx="231" ry="38" fill="#f0dfca"/>
+  <g transform="translate(184 140)">
+    <path d="M21 107h144l-17 123H39Z" fill="url(#paper)"/><path d="M35 127h116M39 155h107M43 184h98" stroke="#e7b48e" stroke-width="7" opacity=".75"/>
+    <path d="M18 113c-18-25 12-43 34-38-4-29 33-46 55-27 20-28 62-17 65 13 32-2 43 35 18 53-20 15-130 18-172-1Z" fill="url(#frosting)"/>
+    <circle cx="93" cy="44" r="13" fill="#ca6d65"/><path d="M91 30q8-14 18-11" fill="none" stroke="#61724e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(344 102) scale(1.14)">
+    <path d="M21 107h144l-17 123H39Z" fill="#dca45a"/><path d="M35 127h116M39 155h107M43 184h98" stroke="#f7db9d" stroke-width="7" opacity=".8"/>
+    <path d="M18 113c-18-25 12-43 34-38-4-29 33-46 55-27 20-28 62-17 65 13 32-2 43 35 18 53-20 15-130 18-172-1Z" fill="#fff2d6"/>
+    <circle cx="93" cy="44" r="13" fill="#9d4e48"/><path d="M91 30q8-14 18-11" fill="none" stroke="#61724e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(516 158) scale(.91)">
+    <path d="M21 107h144l-17 123H39Z" fill="#a85a55"/><path d="M35 127h116M39 155h107M43 184h98" stroke="#e9a88f" stroke-width="7" opacity=".8"/>
+    <path d="M18 113c-18-25 12-43 34-38-4-29 33-46 55-27 20-28 62-17 65 13 32-2 43 35 18 53-20 15-130 18-172-1Z" fill="#f5d6c1"/>
+    <circle cx="93" cy="44" r="13" fill="#d8895c"/><path d="M91 30q8-14 18-11" fill="none" stroke="#61724e" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g fill="#fff8ed" opacity=".8"><circle cx="117" cy="111" r="4"/><circle cx="687" cy="222" r="5"/><circle cx="638" cy="128" r="3"/></g>
+</svg>

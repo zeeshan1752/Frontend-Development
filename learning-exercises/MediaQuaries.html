@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Media Queries</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+    .range { display: none; margin: 1rem 0; padding: 1.25rem; color: #fff; background: #1d4ed8; border-radius: .5rem; text-align: center; }
+    @media (max-width: 399px) { #phone { display: block; background: #0f766e; } }
+    @media (min-width: 400px) and (max-width: 699px) { #tablet { display: block; background: #7c3aed; } }
+    @media (min-width: 700px) and (max-width: 999px) { #laptop { display: block; background: #b45309; } }
+    @media (min-width: 1000px) { #wide { display: block; background: #1d4ed8; } }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How media queries apply different styles at different viewport widths.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Resize the browser across a breakpoint and note when the layout changes.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS media queries</summary>
+    <div>
+      <p>A media query conditionally applies CSS when a feature of the viewing environment matches. Width breakpoints are commonly used to adapt layouts, spacing, or typography to the available viewport. Queries can target a range or a minimum/maximum width, and non-overlapping ranges avoid conflicting states.</p>
+      <p><strong>Example:</strong> A query such as <code>@media (max-width: 600px)</code> can turn a multi-column grid into one column on smaller screens.</p>
+      <p><strong>Common pitfall:</strong> Do not target specific phone or tablet brands. Design around available space, and check that neighboring breakpoint ranges have no unintended gaps or overlaps.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Media queries and screen width</h1>
+  <p>Resize the browser window. Exactly one message appears for each width range. The breakpoints are in CSS pixels, not a device brand check.</p>
+  <div class="range" id="phone">Viewport: 399 px wide or less</div>
+  <div class="range" id="tablet">Viewport: 400–699 px wide</div>
+  <div class="range" id="laptop">Viewport: 700–999 px wide</div>
+  <div class="range" id="wide">Viewport: 1000 px wide or more</div>
+  <p>Change a breakpoint in the style block and resize again to see when the active rule changes.</p>
+</main>
+</body>
+</html>

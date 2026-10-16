@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Lists and Tables</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    table { width: 100%; border-collapse: collapse; }
+    caption { margin-bottom: .5rem; font-weight: 700; text-align: left; }
+    th, td { padding: .65rem; border: 1px solid #94a3b8; text-align: left; }
+    thead { background: #dbeafe; }
+    tbody tr:nth-child(even) { background: #f8fafc; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How to group list items and label rows and columns in a data table.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Add a list item and a table row, keeping each item inside the right parent.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: HTML lists and tables</summary>
+    <div>
+      <p>Use unordered lists when order does not matter and ordered lists when sequence matters. Every list item belongs inside a list. A table represents related data arranged in rows and columns. Captions describe the table, and header cells identify the meaning of each row or column.</p>
+      <p><strong>Example:</strong> A recipe&#39;s ingredients can be an unordered list, while its steps can be an ordered list. A schedule can use a table with column headers and row headers.</p>
+      <p><strong>Common pitfall:</strong> Do not use tables to position page content. Do not put a nested list beside a list item; nest it inside the item it describes.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>HTML lists and tables</h1>
+  <h2>Lists</h2><p>An unordered list is for items without a required order. A nested list belongs inside the list item it describes.</p>
+  <ul><li>Fruit<ul><li>Apples</li><li>Oranges</li></ul></li><li>Vegetables</li></ul>
+  <p>An ordered list is useful for steps where sequence matters:</p>
+  <ol><li>Write the HTML</li><li>Add the CSS</li><li>Open the page in a browser</li></ol>
+  <h2>A small sample table</h2><p>Use a table for data that belongs in rows and columns, not for page layout.</p>
+  <table>
+    <caption>Sample workshop schedule</caption>
+    <thead><tr><th scope="col">Session</th><th scope="col">Topic</th><th scope="col">Length</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">1</th><td>HTML structure</td><td>30 minutes</td></tr>
+      <tr><th scope="row">2</th><td>CSS selectors</td><td>45 minutes</td></tr>
+      <tr><th scope="row">3</th><td>Responsive layout</td><td>45 minutes</td></tr>
+    </tbody>
+  </table>
+</main>
+</body>
+</html>

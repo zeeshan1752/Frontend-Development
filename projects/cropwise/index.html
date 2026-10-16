@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CropWise is a front-end field-planning demo for exploring crop choices and keeping field notes.">
+    <meta name="theme-color" content="#f3f5ee">
+    <title>CropWise — A thoughtful field companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#planner">Skip to field planner</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="CropWise navigation">
+        <a class="brand" href="#top"><span class="brand-icon" aria-hidden="true">✳</span><span>cropwise<small>FIELD COMPANION</small></span></a>
+        <p class="side-label">YOUR SPACE</p>
+        <nav><a class="side-link is-current" href="#top"><span>⌂</span> Overview</a><a class="side-link" href="#planner"><span>✿</span> Crop planner</a><a class="side-link" href="#plant-photo"><span>▧</span> Plant photo</a><a class="side-link" href="#field-notes"><span>▤</span> Field notes</a></nav>
+        <div class="sidebar-tip"><span class="tip-flower" aria-hidden="true">✿</span><p>One small step<br>at a time.</p><span>GROW AT YOUR PACE</span></div>
+        <div class="profile"><div class="avatar" aria-hidden="true">F</div><div><strong>Field notes</strong><small>Local demo</small></div><button type="button" aria-label="More profile options">···</button></div>
+      </aside>
+      <main class="main-content" id="top">
+        <header class="topbar"><div class="breadcrumb">Your space <span>/</span> Overview</div><div class="topbar-right"><span class="today-chip"><span aria-hidden="true">◷</span> <span id="today-label">A good day to grow</span></span><button class="mobile-menu" type="button" aria-label="Open navigation">☰</button></div></header>
+        <section class="welcome"><div><p class="eyebrow">A LITTLE MORE CONFIDENCE, EACH SEASON</p><h1>Good morning,<br><em>grower.</em></h1><p>A calm place to plan your next field step and keep a few notes along the way.</p></div><div class="welcome-art" aria-hidden="true"><div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="plant plant-one"><i></i></div><div class="plant plant-two"><i></i></div><div class="plant plant-three"><i></i></div></div></section>
+
+        <section class="overview-grid" aria-label="Field overview">
+          <article class="overview-card season-card"><div class="card-icon">✺</div><div><span class="card-label">PLANNING FOR</span><strong>One field at a time</strong><small>Start with what you know.</small></div><span class="card-arrow" aria-hidden="true">↗</span></article>
+          <article class="overview-card note-card"><div class="card-icon">▤</div><div><span class="card-label">YOUR NOTES</span><strong id="note-count">0 saved</strong><small>Kept in this browser.</small></div><a class="card-arrow" href="#field-notes" aria-label="Go to field notes">↗</a></article>
+        </section>
+
+        <section class="planner-section" id="planner">
+          <div class="section-heading"><div><p class="eyebrow">A SIMPLE START</p><h2>Explore a crop idea</h2></div><span class="section-mark" aria-hidden="true">01</span></div>
+          <div class="planner-layout">
+            <form class="planner-form" id="planner-form">
+              <p>Share a few details about your field. We’ll show an example result so you can explore the interface.</p>
+              <label>Soil type<select name="soil" required><option value="">Choose a soil type</option><option value="alluvial">Alluvial</option><option value="black">Black</option><option value="sandy">Sandy</option><option value="clay">Clay / loamy</option></select></label>
+              <div class="form-row"><label>Season<select name="season" required><option value="">Choose a season</option><option value="monsoon">Monsoon</option><option value="winter">Winter</option><option value="summer">Summer</option></select></label><label>Water access<select name="water" required><option value="">Choose one</option><option value="limited">Limited</option><option value="some">Some access</option><option value="reliable">Reliable</option></select></label></div>
+              <button class="button" type="submit">Show an example <span aria-hidden="true">↗</span></button>
+              <p class="form-hint">Demo only: the sample logic is not agronomic advice.</p>
+            </form>
+            <article class="recommendation-card" id="recommendation-card" aria-live="polite" aria-atomic="true">
+              <div class="result-top"><span class="result-icon" aria-hidden="true">✿</span><span class="result-label">YOUR SAMPLE RESULT</span><span class="sample-pill">EXAMPLE</span></div>
+              <p class="result-placeholder" id="result-placeholder">Your crop idea will appear here once you’ve added a few field details.</p>
+              <div class="result-content" id="result-content" hidden><p class="result-kicker">A STARTING POINT TO EXPLORE</p><h3 id="result-title"></h3><p id="result-description"></p><div class="result-divider"></div><span class="result-kicker">A FEW THINGS TO CHECK</span><ul id="result-list"></ul></div>
+              <p class="result-footnote">Illustrative interface sample. Confirm local choices with a qualified agricultural advisor.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="photo-section" id="plant-photo">
+          <div class="section-heading"><div><p class="eyebrow">NOTICE, THEN TAKE A NOTE</p><h2>Plant photo</h2></div><span class="section-mark" aria-hidden="true">03</span></div>
+          <div class="photo-card"><div class="photo-copy"><span class="photo-icon" aria-hidden="true">▧</span><div><h3>Keep an observation close</h3><p>Choose a plant photo to preview it on this page. The image stays here and is not analyzed or uploaded.</p></div></div><label class="upload-button" for="plant-photo-input">Choose a photo <span aria-hidden="true">↗</span><input id="plant-photo-input" type="file" accept="image/*"></label><p class="photo-status" id="photo-status" role="status" aria-live="polite">No photo selected.</p><figure class="photo-preview" id="photo-preview" hidden><img id="preview-image" alt="Selected plant photo preview"><figcaption id="preview-caption"></figcaption><button id="clear-photo" type="button">Remove photo</button></figure></div>
+        </section>
+
+        <section class="notes-section" id="field-notes">
+          <div class="section-heading"><div><p class="eyebrow">KEEP A LITTLE RECORD</p><h2>Field notes</h2></div><span class="section-mark" aria-hidden="true">02</span></div>
+          <div class="notes-layout">
+            <form id="note-form" class="note-form"><label for="note-text">What would you like to remember?</label><textarea id="note-text" name="note" rows="4" maxlength="280" placeholder="A weather change, something you noticed, or a question to ask…" required></textarea><div class="note-form-footer"><span id="character-count">0 / 280</span><button class="button button-small" type="submit">Save note <span aria-hidden="true">+</span></button></div><p class="form-hint">Notes stay in this browser on this device.</p></form>
+            <div class="saved-notes" id="saved-notes" aria-live="polite"><p class="notes-empty" id="notes-empty">Your notes will show up here.</p></div>
+          </div>
+        </section>
+        <footer class="page-footer"><span>CropWise · A front-end project</span><span>Take local advice before making field decisions.</span></footer>
+      </main>
+    </div>
+  </body>
+</html>

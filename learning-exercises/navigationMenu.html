@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build a Navigation Menu</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+    nav ul { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    nav a { display: block; padding: .55rem .8rem; border-radius: .4rem; color: #fff; background: #1e3a8a; text-decoration: none; }
+    nav a:hover, nav a:focus-visible { background: #1d4ed8; outline: 3px solid #93c5fd; outline-offset: 2px; }
+    .search { margin-top: 1rem; }
+    input { padding: .5rem; max-width: 100%; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How a navigation list can be laid out with Flexbox and made keyboard accessible.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Use Tab to move through the navigation links and inspect the focus indicator.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Navigation menus</summary>
+    <div>
+      <p>A nav element identifies a set of navigation links. A list organizes the destinations, and CSS can lay them out horizontally with Flexbox. Labels and link text should make destinations understandable. A visible focus style allows keyboard users to follow the same menu.</p>
+      <p><strong>Example:</strong> Use <code>&lt;nav aria-label=&#39;Main navigation&#39;&gt;</code> around a list of links. Use real fragment or page destinations so links work without JavaScript.</p>
+      <p><strong>Common pitfall:</strong> Do not place a div directly as a child of ul; list children should be li elements. A decorative search field is not functional unless it is connected to search behavior.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>A simple navigation menu</h1>
+  <p>A navigation region contains links to important places on a site. List items belong inside the list, and the search field has a visible label.</p>
+  <header><nav aria-label="Main navigation"><ul>
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li>
+  </ul></nav></header>
+  <form class="search" role="search"><label for="site-search">Search this example:</label> <input id="site-search" name="search" type="search" placeholder="Type a search term"></form>
+  <p><strong>Note:</strong> The search field is for layout practice; it is not connected to a search service.</p>
+  <section id="home"><h2>Home</h2><p>Example destination for the Home link.</p></section>
+  <section id="about"><h2>About</h2><p>Example destination for the About link.</p></section>
+  <section id="services"><h2>Services</h2><p>Example destination for the Services link.</p></section>
+  <section id="contact"><h2>Contact</h2><p>Example destination for the Contact link.</p></section>
+</main>
+</body>
+</html>

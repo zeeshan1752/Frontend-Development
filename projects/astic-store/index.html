@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Astic Studio: considered pieces for everyday wardrobes.">
+    <meta name="theme-color" content="#f5f1e8">
+    <title>Astic Studio — Wear it your way</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">A little something for your first order: free delivery over ₹3,000</div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Astic Studio home"><span class="brand-symbol">A</span> ASTIC STUDIO</a>
+      <nav aria-label="Main navigation"><a href="#new-arrivals">New arrivals</a><a href="#shop">Clothing</a><a href="#about">Our point of view</a></nav>
+      <button class="bag-button" type="button" id="open-cart" aria-haspopup="dialog">Bag <span id="cart-count" aria-live="polite">0</span><span aria-hidden="true">↗</span></button>
+    </header>
+    <main id="top">
+      <section class="hero" id="new-arrivals">
+        <div class="hero-copy"><p class="eyebrow"><span></span> THE NEW SEASON, IN GOOD COMPANY</p><h1>Wear it<br><em>your way.</em></h1><p>Considered pieces for the days that turn into evenings. Find your new favorite, then make it yours.</p><a class="button" href="#shop">Shop the edit <span aria-hidden="true">↓</span></a><div class="hero-foot"><span>01 — 05 / THE AUTUMN EDIT</span><span>MADE FOR THE EVERYDAY</span></div></div>
+        <div class="hero-art"><img src="assets/black-dress.svg" alt="Illustration of a black evening dress"><span class="art-circle" aria-hidden="true">THE<br>GOOD<br>EDIT</span><span class="art-label">New season / 2026</span></div>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="shop-heading"><div><p class="eyebrow">A FEW THINGS WE LOVE</p><h2>The considered edit</h2></div><p>Easy layers, occasion pieces, and the things you reach for again.</p></div>
+        <div class="shop-tools"><div class="filters" role="group" aria-label="Filter products by category"><button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Everything <span>05</span></button><button class="filter-button" type="button" data-filter="women" aria-pressed="false">For her</button><button class="filter-button" type="button" data-filter="men" aria-pressed="false">For him</button></div><label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search products</span><input id="product-search" type="search" placeholder="Find a piece"></label></div>
+        <p class="results-count" id="results-count" aria-live="polite"></p>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No pieces match that search. Try another word or category.</p>
+      </section>
+
+      <section class="about-section" id="about"><div class="about-mark" aria-hidden="true">A.</div><div><p class="eyebrow">LESS, BUT BETTER</p><h2>Good clothes.<br><em>Good days.</em></h2></div><p>Astic is a small wardrobe experiment: thoughtful cuts, pieces that work together, and a little more room to be yourself. This storefront is a front-end demo; the products and prices are samples.</p></section>
+    </main>
+    <footer class="site-footer"><a class="brand" href="#top"><span class="brand-symbol">A</span> ASTIC STUDIO</a><span>Find your own way into it.</span><a href="#top">Back to top ↑</a></footer>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+      <div class="cart-header"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="cart-title">Your bag <span id="dialog-count">(0)</span></h2></div><button class="close-button" type="button" id="close-cart" aria-label="Close bag">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">Your bag is taking a little breather.<br>Add something you love.</div>
+      <div class="cart-footer"><p><span>Subtotal</span><strong id="cart-total">₹0</strong></p><button class="button button-dark" id="checkout-button" type="button">Continue to checkout <span aria-hidden="true">↗</span></button><p class="cart-note" id="cart-note" role="status" aria-live="polite">Checkout is a visual demo and does not process payments.</p></div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

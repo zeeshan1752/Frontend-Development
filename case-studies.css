@@ -1,0 +1,26 @@
+.case-main{max-width:1200px;margin:auto;padding:0 40px 80px}
+.case-hero{max-width:760px;padding:80px 0 52px}
+.case-hero h1{font-size:clamp(48px,7vw,76px);line-height:1.02;letter-spacing:-.07em;font-weight:500;margin:0 0 20px}
+.case-hero h1 em{color:#527362;font-family:var(--serif);font-weight:500;letter-spacing:-.06em}
+.case-hero>p:not(.eyebrow){max-width:650px;color:var(--muted);font-size:15px;line-height:1.8;margin:0 0 20px}
+.case-list{display:grid;gap:24px}
+.case-study{scroll-margin-top:24px;background:#fbfaf5;border:1px solid var(--line);display:grid;grid-template-columns:.76fr 1.24fr;gap:40px;padding:38px 42px}
+.case-heading{align-self:start;position:sticky;top:24px}
+.case-heading .eyebrow{margin-bottom:13px}
+.case-heading h2{font:500 clamp(27px,3vw,38px)/1.12 var(--serif);letter-spacing:-.035em;margin:0 0 12px}
+.case-heading>p:not(.eyebrow){color:var(--muted);font-size:13px;line-height:1.7;margin:0 0 20px}
+.case-heading .button{font-size:11px}
+.case-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 30px}
+.case-details section{min-width:0}
+.case-details h3{margin:0 0 9px;font:500 17px var(--serif);color:var(--green)}
+.case-details p,.case-details li{color:#58645b;font-size:12px;line-height:1.75}
+.case-details p{margin:0}
+.case-details ul{margin:0;padding-left:17px}
+.case-details li+li{margin-top:5px}
+.case-details code{padding:1px 4px;background:#eeefe7;border-radius:3px;color:#344d3e;font-size:.95em}
+.case-details .case-limit{padding:15px;background:#eef0e8;border-radius:3px}
+.case-note{margin-top:35px;padding:28px 32px;background:#e6e9dc}
+.case-note h2{font-size:23px;font-weight:500;margin:0 0 8px}
+.case-note p{max-width:760px;color:#58645b;font-size:13px;line-height:1.75;margin:0 0 14px}
+@media(max-width:900px){.case-main{padding:0 25px 60px}.case-study{grid-template-columns:1fr;gap:25px;padding:28px}.case-heading{position:static}.case-hero{padding:60px 0 40px}}
+@media(max-width:560px){.case-main{padding:0 18px 45px}.case-details{grid-template-columns:1fr;gap:20px}.case-study{padding:23px 20px}.case-note{padding:23px 20px}.case-hero h1{font-size:48px}}

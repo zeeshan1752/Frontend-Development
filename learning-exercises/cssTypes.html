@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inline, Internal, and External CSS</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+  <link rel="stylesheet" href="color.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .sample { padding: .75rem; border-radius: .4rem; }
+    .external-example { color: #14532d; background: #dcfce7; }
+    .internal-example { color: #1e3a8a; background: #dbeafe; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How inline, internal, and external CSS apply styles to HTML.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Edit one paragraph's style, then compare it with the class rule and linked stylesheet.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Inline, internal, and external CSS</summary>
+    <div>
+      <p>Inline CSS is written on an element&#39;s style attribute. Internal CSS is in a style element in the document head. External CSS is in a separate file linked with a link element. The browser combines matching rules using the cascade, which considers importance, selector specificity, and source order.</p>
+      <p><strong>Example:</strong> This page gives one paragraph a class styled by <code>color.css</code>, another a class styled in the page head, and a third an inline style.</p>
+      <p><strong>Common pitfall:</strong> The three methods are not interchangeable for maintenance. Repeating inline styles makes site-wide updates difficult. When rules conflict, specificity and importance matter in addition to source order.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Three ways to add CSS</h1>
+  <p>Each paragraph uses a different method. The first gets its rule from <code>color.css</code>, the second from this page's <code>&lt;style&gt;</code> block, and the third from an inline <code>style</code> attribute.</p>
+  <p class="sample external-example">External CSS: edit the rule in color.css to change this paragraph.</p>
+  <p class="sample internal-example">Internal CSS: edit the .internal-example rule in this page's head.</p>
+  <p class="sample" style="color:#7c2d12;background:#ffedd5">Inline CSS: this style is written directly on the element.</p>
+  <p>For larger sites, a separate stylesheet is usually easiest to reuse and maintain.</p>
+</main>
+</body>
+</html>

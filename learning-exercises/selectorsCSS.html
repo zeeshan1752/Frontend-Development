@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Element, Class, ID, and Group Selectors</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    p { padding: .75rem; border: 1px solid #94a3b8; border-radius: .4rem; }
+    .second-class { color: #1e3a8a; background: #dbeafe; }
+    #featured { color: #7c2d12; background: #ffedd5; }
+    footer, span { color: #14532d; background: #dcfce7; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How element, class, id, and grouped selectors can be combined.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Create a second element with the same class and check which rules both elements share.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Element, class, id, and group selectors</summary>
+    <div>
+      <p>Element selectors affect every matching tag. A class selector can be reused across many elements. An id selector is for one unique element. A group selector applies the same declarations to several selectors separated by commas. Selector choice determines how broadly a rule applies.</p>
+      <p><strong>Example:</strong> The rule <code>footer, span { color: ... }</code> styles footer elements and spans. A rule for <code>.second-class</code> styles every element carrying that class.</p>
+      <p><strong>Common pitfall:</strong> A comma creates a group of separate selectors. A space creates a descendant relationship, so <code>footer span</code> means a span inside a footer.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Common CSS selectors</h1>
+  <p>The element selector styles every paragraph. A class can be reused, an id should identify one unique element, and a grouped selector applies the same rule to multiple selector types.</p>
+  <p class="second-class">This paragraph uses the reusable second-class class.</p>
+  <p id="featured">This paragraph is the uniquely identified featured element.</p>
+  <p class="second-class">A second element can reuse the same class.</p>
+  <p><span>This span and the footer share the grouped selector.</span></p>
+  <footer>Footer text also matches the grouped selector.</footer>
+</main>
+</body>
+</html>

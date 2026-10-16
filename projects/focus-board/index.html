@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Focus Board is a simple task planner that keeps your next steps in one place.">
+    <meta name="theme-color" content="#f4f2eb">
+    <title>Focus Board — One thing at a time</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#tasks">Skip to your tasks</a>
+    <div class="app-frame">
+      <header class="topbar"><a class="brand" href="#top"><span class="brand-mark">F</span> focus board</a><div class="topbar-actions"><span class="local-badge"><i></i> SAVED ON THIS DEVICE</span><button class="theme-dot" type="button" aria-label="Decorative sun icon">☼</button></div></header>
+      <main id="top">
+        <section class="welcome"><div><p class="eyebrow">A CLEARER HEAD, ONE STEP AT A TIME</p><h1 id="greeting">Make room<br>for <em>what matters.</em></h1><p class="date-line" id="today-label"></p></div><div class="welcome-illustration" aria-hidden="true"><div class="sun"></div><div class="plant-pot"><span class="pot-rim"></span><i class="leaf leaf-a"></i><i class="leaf leaf-b"></i><i class="leaf leaf-c"></i><i class="leaf leaf-d"></i><i class="stem"></i></div><span class="illustration-note">GROW<br>AT YOUR<br>OWN PACE</span></div></section>
+
+        <section class="summary-grid" aria-label="Task summary"><article class="summary-card"><span class="summary-icon">↗</span><div><span class="summary-label">ON YOUR LIST</span><strong id="open-count">0</strong><small>things to come back to</small></div></article><article class="summary-card complete-card"><span class="summary-icon">✓</span><div><span class="summary-label">ALREADY DONE</span><strong id="done-count">0</strong><small>small wins count too</small></div></article><article class="progress-card"><div class="progress-head"><span>Today’s momentum</span><strong id="progress-copy">0%</strong></div><div class="progress-track"><span id="progress-bar"></span></div><p id="progress-message">Start with one small thing.</p></article></section>
+
+        <section class="tasks-section" id="tasks">
+          <div class="section-heading"><div><p class="eyebrow">YOUR DAY, WITH A LITTLE SPACE</p><h2>Things to do</h2></div><div class="filter-tabs" role="group" aria-label="Filter tasks"><button class="filter-tab is-active" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-tab" type="button" data-filter="open" aria-pressed="false">To do</button><button class="filter-tab" type="button" data-filter="done" aria-pressed="false">Done</button></div></div>
+          <form class="task-form" id="task-form"><label class="task-title-label"><span class="sr-only">Task name</span><input id="task-title" name="title" placeholder="Add a task…" maxlength="90" required></label><label class="select-label"><span class="sr-only">Category</span><select id="task-category" name="category"><option value="focus">Focus</option><option value="learning">Learning</option><option value="life">Life</option></select></label><label class="date-label"><span class="sr-only">Due date</span><input id="task-date" name="date" type="date" aria-label="Due date"></label><button class="add-task" type="submit"><span>+</span> Add task</button></form>
+          <div class="task-list" id="task-list" aria-live="polite"></div>
+          <div class="empty-state" id="empty-state" hidden><span>✳</span><h3>Nothing on this list.</h3><p>Take a breath or add one small next step.</p></div>
+        </section>
+        <footer class="page-footer"><span>FOCUS BOARD · A FRONT-END PROJECT</span><span>Made for the next small step.</span></footer>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semantic HTML Elements</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    header, footer { padding: 1rem; color: white; background: #1e3a8a; border-radius: .5rem; }
+    nav ul { display: flex; flex-wrap: wrap; gap: 1rem; padding-left: 1.25rem; }
+    .columns { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; }
+    .columns > * { padding: 1rem; background: #f1f5f9; border-radius: .5rem; }
+    @media (max-width: 36rem) { .columns { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How semantic elements label the purpose of page regions for people and browsers.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Replace a generic div with a header, main, article, or footer where it fits.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Semantic HTML elements</summary>
+    <div>
+      <p>Semantic elements describe the role of a region. A header introduces a page or section; nav groups navigation links; main contains the page&#39;s primary content; article is a self-contained composition; section groups a theme; aside contains related content; footer provides closing information. These elements make page structure clearer to browsers and assistive technology.</p>
+      <p><strong>Example:</strong> Use <code>&lt;main&gt;</code> once for the main content, then place an <code>&lt;article&gt;</code> and a related <code>&lt;aside&gt;</code> inside it. A generic <code>&lt;div&gt;</code> is still appropriate when no semantic element fits.</p>
+      <p><strong>Common pitfall:</strong> Do not replace every div with a semantic tag. Choose the element that matches the content&#39;s role, and avoid nesting a main element inside another main element.</p>
+    </div>
+  </details>
+  </aside>
+<div class="lesson-content">
+  <h1>Semantic HTML page structure</h1>
+  <p>Semantic elements describe what a region is for. They give the page a useful outline and make its structure easier to understand.</p>
+  <header><p><strong>Site header</strong> — often contains a logo or page introduction.</p>
+    <nav aria-label="Page sections"><ul><li><a href="#story">Story</a></li><li><a href="#details">Details</a></li></ul></nav>
+  </header>
+  <main>
+    <div class="columns">
+      <article id="story"><h2>Article: a complete piece of content</h2><p>An article can make sense on its own, such as a post, story, or news item.</p></article>
+      <aside id="details"><h2>Aside: related information</h2><p>This content supports the article but is not its main text.</p></aside>
+    </div>
+    <section><h2>Section: a themed group</h2><p>A section usually has its own heading and groups related content.</p>
+      <details><summary>When should I use a div?</summary><p>Use a div when you need a generic container and no semantic element describes its purpose.</p></details>
+    </section>
+  </main>
+  <footer><p>Footer: page or site information can go here.</p></footer>
+</div>
+</body>
+</html>

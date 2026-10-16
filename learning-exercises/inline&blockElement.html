@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Block and Inline Elements</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .example { margin: 1rem 0; padding: 1rem; background: #f1f5f9; border-radius: .5rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>HTML foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> Block elements start on a new line; inline elements flow within text.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Add a paragraph with a link and notice which elements begin on their own line.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Block and inline elements</summary>
+    <div>
+      <p>Block elements normally begin on a new line and use the available width. Inline elements flow within a line of text and take only the space their content needs. Some elements, such as inline-block elements, can sit on a line while still accepting width and height.</p>
+      <p><strong>Example:</strong> A paragraph is block-level by default. A link or strong element is inline by default. CSS can change these behaviors with <code>display</code>.</p>
+      <p><strong>Common pitfall:</strong> Do not choose an element only for its visual shape. Use HTML according to meaning, then use CSS display rules to control layout.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>HTML block and inline elements</h1>
+  <p>Block elements, such as headings and paragraphs, normally start on a new line and take the available width.</p>
+  <div class="example"><h2>Block example</h2><p>This paragraph is a block. <strong>This strong element is inline</strong>, so it stays in the sentence.</p></div>
+  <p>Links are inline by default: visit <a href="#practice">the practice note</a> without breaking the sentence.</p>
+  <p id="practice">Try adding a second inline link, then add a paragraph below it. Compare how the browser places them.</p>
+</main>
+</body>
+</html>

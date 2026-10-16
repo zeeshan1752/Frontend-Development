@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Units and Responsive Sizing</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+    .unit-box { margin: .75rem 0; padding: .75rem; background: #dbeafe; border-left: .3rem solid #2563eb; }
+    .fixed { width: 240px; }
+    .relative { width: 60%; }
+    .viewport { width: min(70vw, 100%); }
+    .measurements { padding: 1rem; border: 1px dashed #64748b; }
+    .rem-text { font-size: 1.25rem; }
+    .em-text { font-size: 1.25em; }
+    @media (max-width: 36rem) { .relative { width: 100%; } .viewport { width: 100%; } }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How fixed, relative, and viewport units affect responsive sizing.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change a width from pixels to rem or percent and compare it at different viewport sizes.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS units and responsive sizing</summary>
+    <div>
+      <p>Pixels are fixed CSS lengths. Percentages are relative to a containing block. Viewport units relate to the viewport dimensions. Em is relative to the current element&#39;s font size; rem is relative to the root element&#39;s font size. Relative units can make layouts more flexible, while media queries can adapt layouts at breakpoints.</p>
+      <p><strong>Example:</strong> A 60% width uses 60 percent of the containing block. A 1.25rem font size scales with the root font size. A 70vw width follows the viewport width.</p>
+      <p><strong>Common pitfall:</strong> Viewport units can be wider than a content column, and fixed pixels can overflow narrow screens. Combine them with max-width, min(), or responsive rules where needed.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS units and responsive sizing</h1>
+  <p>Pixels give a fixed CSS length. Percentages relate to the parent width. Viewport units relate to the visible browser area. <code>rem</code> relates to the root font size, while <code>em</code> relates to the current element's font size.</p>
+  <section class="measurements" aria-label="Examples of CSS length units">
+    <div class="unit-box fixed">240px wide</div>
+    <div class="unit-box relative">60% of this bordered parent</div>
+    <div class="unit-box viewport">70vw wide (capped at its parent)</div>
+    <p class="rem-text">This text uses rem.</p>
+    <p class="em-text">This text uses em.</p>
+  </section>
+  <p>Resize the page to compare the fixed, parent-relative, and viewport-relative widths. The small-screen media query keeps the last two examples inside the content area.</p>
+</main>
+</body>
+</html>

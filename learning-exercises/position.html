@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Positioning</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .scene { position: relative; min-height: 38rem; padding: 0 1rem 1rem; border: 1px solid #cbd5e1; border-radius: .5rem; background: #f8fafc; }
+    .sticky { position: sticky; top: 0; z-index: 5; padding: .65rem; color: #fff; background: #1e3a8a; border-radius: .4rem; }
+    .box { display: inline-grid; place-items: center; width: 7rem; height: 5rem; margin: 1rem .5rem 1rem 0; color: #fff; background: #2563eb; border-radius: .4rem; }
+    .relative { position: relative; top: .75rem; left: .75rem; background: #0f766e; }
+    .absolute-parent { position: relative; min-height: 10rem; padding: 1rem; border: 1px dashed #64748b; }
+    .absolute-child { position: absolute; right: .75rem; bottom: .75rem; display: grid; place-items: center; width: 8rem; height: 5rem; color: #fff; background: #9a3412; border-radius: .4rem; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How relative, absolute, and sticky positioning change an element's placement.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Scroll the sample and watch the sticky element; compare it with the positioned child.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS positioning</summary>
+    <div>
+      <p>Static is the default flow. Relative positioning offsets an element from its normal position while preserving its original space. Absolute positioning removes an element from normal flow and places it relative to its nearest positioned ancestor. Fixed positioning is relative to the viewport. Sticky positioning follows normal flow until it reaches a scroll offset within its container.</p>
+      <p><strong>Example:</strong> Give a parent <code>position: relative</code> and a child <code>position: absolute</code> to anchor the child in that parent. A sticky bar needs scrollable space within its containing region.</p>
+      <p><strong>Common pitfall:</strong> An absolutely positioned element may cover other content because it no longer reserves space. Sticky positioning is constrained by its scroll container and containing block.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS positioning</h1>
+  <p>Positioned elements can be moved relative to their normal place or placed within a positioned parent. Scroll this page to watch the sticky bar.</p>
+  <section class="scene">
+    <div class="sticky">Sticky bar — stays near the top while this section scrolls</div>
+    <p>The first box stays in normal flow. The green box is offset with <code>position: relative</code>, so it still reserves its original space.</p>
+    <div class="box">Normal</div><div class="box relative">Relative</div>
+    <h2>Absolute positioning</h2>
+    <p>The orange box is absolutely positioned relative to the bordered parent below it.</p>
+    <div class="absolute-parent">Positioned parent<div class="absolute-child">Absolute child</div></div>
+    <p>Scroll through this section. The sticky bar stops sticking when this section ends.</p>
+  </section>
+  <p><code>static</code> is the default. Use <code>relative</code> for a small offset, <code>absolute</code> for placement inside a positioned ancestor, and <code>sticky</code> for an element that follows scrolling within its container.</p>
+</main>
+</body>
+</html>

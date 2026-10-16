@@ -1,0 +1,97 @@
+/* Shared reading aid for the standalone practice pages. */
+.lesson-guide {
+    box-sizing: border-box;
+    width: min(1050px, calc(100% - 32px));
+    margin: 16px auto 28px;
+    padding: 16px 18px;
+    border: 1px solid #dfe6db;
+    border-left: 4px solid #68846a;
+    border-radius: 4px;
+    background: #f5f8f1;
+    color: #34453a;
+    font: 13px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.lesson-guide-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+    color: #7a8979;
+    font: 9px ui-monospace, Consolas, monospace;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.lesson-guide-top a {
+    color: #3e6448;
+    font: 600 11px system-ui, -apple-system, "Segoe UI", sans-serif;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.lesson-guide-top a:hover {
+    text-decoration: underline;
+}
+
+.lesson-guide p {
+    margin: 0;
+}
+
+.lesson-guide .lesson-practice {
+    margin-top: 7px;
+    color: #657565;
+}
+
+.lesson-guide strong {
+    color: #34453a;
+}
+
+.lesson-guide a:focus-visible {
+    outline: 3px solid #b46540;
+    outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+    .lesson-guide {
+        width: calc(100% - 24px);
+        margin: 12px auto 20px;
+        padding: 13px 14px;
+        font-size: 12px;
+    }
+
+    .lesson-guide-top {
+        align-items: flex-start;
+    }
+}
+
+.lesson-guide .lesson-explanation {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #dfe6db;
+}
+.lesson-guide .lesson-explanation summary {
+    color: #3e6448;
+    cursor: pointer;
+    font: 600 12px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.lesson-guide .lesson-explanation summary:focus-visible {
+    outline: 3px solid #b46540;
+    outline-offset: 3px;
+}
+.lesson-guide .lesson-explanation > div {
+    max-width: 78ch;
+    margin-top: 8px;
+}
+.lesson-guide .lesson-explanation p + p {
+    margin-top: 7px;
+}
+.lesson-guide .lesson-explanation code {
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: #e8eee5;
+    color: #34453a;
+    font: 11px ui-monospace, Consolas, monospace;
+}

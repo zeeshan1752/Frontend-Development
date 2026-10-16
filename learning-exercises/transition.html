@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Transitions</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .demo-button { padding: .8rem 1.2rem; color: white; background: #1d4ed8; border: 0; border-radius: .5rem; font: inherit; cursor: pointer; transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .demo-button:hover { background: #1e3a8a; transform: translateY(-2px); box-shadow: 0 5px 12px rgb(15 23 42 / 20%); }
+    .demo-button:focus-visible { outline: 3px solid #93c5fd; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { .demo-button { transition: none; } }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Effects and interaction</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How transitions animate a property when its value changes between states.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the transition duration and hover or focus the example.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS transitions</summary>
+    <div>
+      <p>A transition interpolates a property from its old value to its new value when a state changes. It needs a property, duration, and optionally a timing function and delay. Hover and focus are common state changes, but transitions can also follow class changes made by JavaScript.</p>
+      <p><strong>Example:</strong> The button changes background color and position on hover. The transition declared in its base rule animates those changes smoothly.</p>
+      <p><strong>Common pitfall:</strong> A transition does not create a state change by itself. Set a different start or end value, and prefer listing the properties to animate instead of using <code>all</code>.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS transitions</h1>
+  <p>A transition animates a property when a state changes. Hover or keyboard-focus the button. Its color, position, and shadow change over a short duration.</p>
+  <button class="demo-button" type="button">Hover or focus me</button>
+  <p>Transitions need a starting value and a changed value. Here, <code>:hover</code> supplies the changed values. The style block lists only the properties that should animate.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flexbox: Main and Cross Axes</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+    .flex-container { display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 1rem; min-height: 18rem; padding: 1rem; border: 2px solid #334155; border-radius: .6rem; }
+    .flex-item { flex: 1 1 9rem; min-height: 5rem; display: grid; place-items: center; padding: 1rem; color: #fff; background: #1d4ed8; border-radius: .4rem; }
+    .flex-item:nth-child(2) { background: #0f766e; }
+    .flex-item:nth-child(3) { background: #9a3412; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How Flexbox arranges items along a main axis and aligns them across the other axis.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change justify-content, then change align-items and compare the two directions.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: Flexbox main and cross axes</summary>
+    <div>
+      <p>Flexbox is a one-dimensional layout model. A flex container arranges children along a main axis, which follows flex-direction. The cross axis is perpendicular. Justify-content distributes items on the main axis; align-items aligns them on the cross axis. Gap sets consistent spacing, and flex-wrap allows items to continue on another line.</p>
+      <p><strong>Example:</strong> With the default row direction, justify-content moves items horizontally and align-items moves them vertically. Switching to column changes which direction is the main axis.</p>
+      <p><strong>Common pitfall:</strong> Do not assume the main axis is always horizontal. It changes when flex-direction changes, and alignment settings follow the axes.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Flexbox: arrange items in one direction</h1>
+  <p>A flex container has a main axis and a cross axis. With the default row direction, the main axis runs left to right and the cross axis runs top to bottom.</p>
+  <ul>
+    <li><code>justify-content</code> distributes items along the main axis.</li>
+    <li><code>align-items</code> aligns items along the cross axis.</li>
+    <li><code>gap</code> adds space between items.</li>
+  </ul>
+  <div class="flex-container" aria-label="Three Flexbox items">
+    <div class="flex-item">Item 1</div><div class="flex-item">Item 2</div><div class="flex-item">Item 3</div>
+  </div>
+  <p>Try changing <code>justify-content</code> or <code>align-items</code> in the style block. If you switch <code>flex-direction</code> to <code>column</code>, the axes switch too.</p>
+</main>
+</body>
+</html>

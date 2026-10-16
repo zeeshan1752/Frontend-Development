@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Font Properties</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; }
+    .card { margin: 1rem 0; padding: 1rem; border: 1px solid #cbd5e1; border-radius: .5rem; background: #f8fafc; }
+    .serif { font-family: Georgia, "Times New Roman", serif; }
+    .sans { font-family: system-ui, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, Consolas, monospace; }
+    .large { font-size: 1.25rem; }
+    .bold { font-weight: 700; }
+    .italic { font-style: italic; }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How font family, size, weight, and line spacing affect readability.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the font size and line height, then compare the paragraph's readability.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS font properties</summary>
+    <div>
+      <p>Font family chooses the typeface; size controls the scale; weight controls thickness; style can make text italic; and line-height controls space between lines. A font stack lists preferred fonts followed by fallbacks. Relative sizes such as rem adapt to the root text size.</p>
+      <p><strong>Example:</strong> Use a readable sans-serif stack for interface text and a monospace stack for code. Increase line-height for long paragraphs to improve scanning.</p>
+      <p><strong>Common pitfall:</strong> If a named web font is not loaded, the browser falls back. Include a sensible fallback and do not assume every visitor has the same fonts installed.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS font properties</h1>
+  <p>Fonts change the look and readability of text. These examples use fonts installed with common systems, so no network connection is needed.</p>
+  <div class="card serif">Serif family: a traditional style with small strokes at letter ends.</div>
+  <div class="card sans large">Sans-serif family: a clean style, shown at a larger size.</div>
+  <div class="card mono"><span class="bold">Monospace family:</span> each character takes a similar amount of space.</div>
+  <p class="italic">Font weight, style, size, and line height are separate properties you can adjust independently.</p>
+</main>
+</body>
+</html>

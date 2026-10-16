@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Float and Clear</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; }
+    .float-demo { padding: 1rem; border: 1px solid #cbd5e1; border-radius: .5rem; background: #f8fafc; }
+    .float-note { float: left; width: 35%; min-height: 8rem; margin: 0 1rem .75rem 0; padding: 1rem; color: white; background: #1d4ed8; border-radius: .4rem; }
+    .clear-example { clear: both; margin-top: 1rem; padding: .75rem; background: #dcfce7; border-radius: .4rem; }
+    @media (max-width: 36rem) { .float-note { width: 42%; } }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>Layout and responsive design</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How float lets text wrap around an item and how clear starts below a float.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Move the float to the other side and check where the next section begins.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS float and clear</summary>
+    <div>
+      <p>Float was designed to let text wrap around an item, often an image. A floated element moves toward the left or right edge of its containing block and surrounding inline content flows beside it. Clear prevents an element from sitting beside a float on the specified side.</p>
+      <p><strong>Example:</strong> Set <code>float: left</code> on a note or image, then use <code>clear: both</code> on the next section to start below either side.</p>
+      <p><strong>Common pitfall:</strong> Float is not a general replacement for modern page layout. Use Flexbox or Grid for navigation, columns, or card grids.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>Float and clear</h1>
+  <p><code>float</code> moves an element to one side so nearby text can wrap around it. <code>clear</code> moves a later element below the float.</p>
+  <section class="float-demo">
+    <div class="float-note">This note floats to the left.</div>
+    <p>Text in this paragraph flows beside the floated note and continues below it when it reaches the note's bottom edge. This is the original purpose of floats: wrapping text around an item such as an image.</p>
+    <p class="clear-example"><strong>Cleared section:</strong> this starts below the float because it uses <code>clear: both</code>.</p>
+  </section>
+  <p>Try changing <code>float: left</code> to <code>float: right</code>, then change <code>clear</code> to <code>none</code>.</p>
+</main>
+</body>
+</html>

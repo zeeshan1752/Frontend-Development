@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Custom Properties</title>
+  <link rel="stylesheet" href="lesson-guide.css">
+    <style>
+    :root { --color-primary: #1d4ed8; --color-accent: #f97316; --color-surface: #eff6ff; --space: 1rem; --card-shadow: 0 4px 14px rgb(15 23 42 / 12%); }
+    body { margin: 0; color: #1f2937; font: 1rem/1.6 system-ui, sans-serif; }
+    .lesson-content { max-width: 56rem; margin: 2rem auto; padding: 0 1rem; }
+    .card-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: var(--space); }
+    .card { padding: var(--space); border-top: .35rem solid var(--color-accent); border-radius: .6rem; background: var(--color-surface); box-shadow: var(--card-shadow); }
+    .card h2, .card a { color: var(--color-primary); }
+    </style>
+</head>
+<body>
+<aside class="lesson-guide" aria-label="Lesson guide">
+    <div class="lesson-guide-top"><span>CSS foundations</span><a href="index.html">Lesson index</a></div>
+    <p><strong>What you'll learn:</strong> How custom properties store reusable values such as colors and spacing.</p>
+    <p class="lesson-practice"><strong>Try it:</strong> Change the main color variable once and check every component that uses it.</p>
+  <details class="lesson-explanation">
+    <summary>Detailed explanation: CSS custom properties</summary>
+    <div>
+      <p>A custom property stores a CSS value under a name beginning with two hyphens. Define it in a rule such as :root to make it available throughout the document, then read it using var(). A fallback can be supplied if the custom property is missing. This makes theme changes and repeated values easier to manage.</p>
+      <p><strong>Example:</strong> Set <code>--color-accent: #f97316</code> once, then use <code>var(--color-accent)</code> for borders and highlights.</p>
+      <p><strong>Common pitfall:</strong> A misspelled or undefined custom property makes the declaration invalid unless a fallback is supplied. Define a variable before depending on it.</p>
+    </div>
+  </details>
+  </aside>
+<main class="lesson-content">
+  <h1>CSS custom properties</h1>
+  <p>Custom properties are reusable values. Define a name that starts with <code>--</code>, then read it with <code>var(--name)</code>.</p>
+  <section class="card-list" aria-label="Example cards">
+    <article class="card"><h2>Primary color</h2><p>The heading uses the shared blue color.</p><a href="#practice">Go to the practice note</a></article>
+    <article class="card"><h2>Shared spacing</h2><p>The cards use one spacing variable for padding and the grid gap.</p><a href="#practice">Go to the practice note</a></article>
+    <article class="card"><h2>Reusable shadow</h2><p>One shadow variable gives each card a consistent depth.</p><a href="#practice">Go to the practice note</a></article>
+  </section>
+  <p id="practice"><strong>Try it:</strong> Change <code>--color-accent</code> or <code>--space</code> in <code>:root</code>. Each place using that variable updates together.</p>
+</main>
+</body>
+</html>
